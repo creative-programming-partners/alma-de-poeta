@@ -2,9 +2,11 @@
 
 Landing page para **Alma de Poeta**, café + librería + restaurante en Lima, Perú ("un espacio de familia, amigos y libros").
 
+Sitio publicado: https://creative-programming-partners.github.io/alma-de-poeta/
+
 ## Contenido
 
-- `Alma de Poeta.dc.html` — diseño de la landing (Claude Design)
+- `index.html` — diseño de la landing (Claude Design, antes `Alma de Poeta.dc.html`)
 - `support.js` — script de soporte del diseño
 - `assets/` — logos y fotografías del local
 - `uploads/` — material de referencia (carta en PDF, fotos y el prompt de diseño)
