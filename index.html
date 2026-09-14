@@ -66,15 +66,19 @@ button{font-family:inherit; cursor:pointer}
   </div>
 </header>
 
-<section id="inicio" data-screen-label="Hero" style="position:relative; min-height:clamp(620px,96svh,940px); display:flex; flex-direction:column; justify-content:flex-end; align-items:center; text-align:center; padding:clamp(120px,16vh,180px) clamp(20px,5vw,56px) clamp(120px,19vh,160px); overflow:hidden">
+<section id="inicio" data-screen-label="Hero" style="position:relative; min-height:clamp(620px,96svh,940px); display:flex; flex-direction:column; justify-content:flex-end; align-items:center; text-align:center; padding:clamp(110px,15vh,170px) clamp(20px,5vw,56px) clamp(120px,19vh,150px); overflow:hidden">
   <picture>
     <source media="(max-width:600px)" srcset="assets/foto-fachada-movil.jpg">
     <img src="assets/foto-fachada.jpg" alt="Fachada de Alma de Poeta café y libros de noche" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 30%; filter:sepia(.1) saturate(.95) contrast(1.04) brightness(.95)">
   </picture>
-  <div style="position:absolute; inset:0; background:linear-gradient(180deg, var(--veil) 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 38%, var(--veil) 70%, var(--veil) 100%)"></div>
-  <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,0) 36%, rgba(12,10,8,.5) 58%, rgba(12,10,8,.72) 100%)"></div>
+  <div style="position:absolute; inset:0; background:linear-gradient(180deg, var(--veil) 0%, rgba(0,0,0,.36) 22%, rgba(0,0,0,.36) 40%, var(--veil) 76%, var(--veil) 100%)"></div>
+  <div style="position:absolute; inset:0; background:radial-gradient(ellipse 72% 58% at 50% 52%, rgba(12,10,8,.58) 0%, rgba(12,10,8,.32) 55%, rgba(12,10,8,0) 100%)"></div>
+  <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,0) 62%, rgba(12,10,8,.55) 100%)"></div>
   <div style="position:absolute; inset:0; background:var(--tint); mix-blend-mode:soft-light"></div>
   <div data-rv style="position:relative; z-index:2; display:flex; flex-direction:column; align-items:center; gap:clamp(14px,2.4vh,24px); max-width:min(880px,94vw); opacity:.001; transform:translateY(22px); transition:opacity .8s ease-in-out, transform .8s ease-in-out">
+    <div style="filter:drop-shadow(0 2px 16px rgba(0,0,0,.55)); margin-bottom:clamp(2px,1vh,10px)">
+      <span role="img" aria-label="Alma de Poeta café &amp; libros" style="display:block; width:clamp(250px,64vw,460px); aspect-ratio:1156/419; background:#F6EFDF; -webkit-mask-image:url(assets/logo-cafe-libros.png); mask-image:url(assets/logo-cafe-libros.png); -webkit-mask-size:contain; mask-size:contain; -webkit-mask-repeat:no-repeat; mask-repeat:no-repeat; -webkit-mask-position:center; mask-position:center"></span>
+    </div>
     <p style="margin:0; font:400 clamp(27px,5.4vw,50px)/1.2 'Pinyon Script',cursive; color:#F6EFDF; text-shadow:0 2px 24px rgba(0,0,0,.45)"><span style="display:var(--i-es)">un espacio de familia, amigos y libros</span><span style="display:var(--i-en)">a place for family, friends and books</span></p>
     <p style="margin:0; font:500 clamp(11px,2.1vw,13px)/1.9 'Alegreya Sans',sans-serif; letter-spacing:.34em; text-transform:uppercase; color:rgba(246,239,223,.9)"><span style="display:var(--i-es)">Café · Librería · Restaurante — Cercado de Lima</span><span style="display:var(--i-en)">Coffee · Bookshop · Restaurant — Lima, Perú</span></p>
     <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:12px; margin-top:6px">
