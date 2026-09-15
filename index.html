@@ -3,6 +3,50 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alma de Poeta · Café &amp; libros en Cercado de Lima</title>
+<meta name="description" content="Café, librería y restaurante en Los Cipreses, Cercado de Lima. Mira la carta, el horario y cómo llegar, y escríbenos por WhatsApp.">
+<link rel="canonical" href="https://creative-programming-partners.github.io/alma-de-poeta/">
+<meta name="theme-color" content="#15120E">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Alma de Poeta">
+<meta property="og:locale" content="es_PE">
+<meta property="og:title" content="Alma de Poeta · Café &amp; libros">
+<meta property="og:description" content="Café, librería y restaurante en Los Cipreses, Cercado de Lima. Mira la carta, el horario y cómo llegar, y escríbenos por WhatsApp.">
+<meta property="og:url" content="https://creative-programming-partners.github.io/alma-de-poeta/">
+<meta property="og:image" content="https://creative-programming-partners.github.io/alma-de-poeta/assets/og-alma-de-poeta.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Fachada de Alma de Poeta café y libros de noche">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Alma de Poeta",
+  "alternateName": "Alma de Poeta café & libros",
+  "description": "Café, librería y restaurante en Los Cipreses, Cercado de Lima. Mira la carta, el horario y cómo llegar, y escríbenos por WhatsApp.",
+  "url": "https://creative-programming-partners.github.io/alma-de-poeta/",
+  "image": "https://creative-programming-partners.github.io/alma-de-poeta/assets/og-alma-de-poeta.jpg",
+  "servesCuisine": ["Cafetería", "Comida americana"],
+  "acceptsReservations": true,
+  "hasMenu": "https://creative-programming-partners.github.io/alma-de-poeta/#carta",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Jr. Arístides del Carpio Muñoz 1679, Urb. Los Cipreses",
+    "addressLocality": "Cercado de Lima",
+    "addressRegion": "Lima",
+    "addressCountry": "PE"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": -12.0571421, "longitude": -77.0779192 },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday"], "opens": "17:00", "closes": "22:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Thursday", "Friday", "Saturday"], "opens": "17:00", "closes": "23:00" }
+  ]
+}
+</script>
 <link rel="preload" as="image" href="assets/logo-cafe-libros.png">
 <script defer src="https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.min.js"></script>
 <style>
@@ -19,9 +63,9 @@ html.adp-loading #adp-loader{display:flex; position:fixed; inset:0; z-index:1000
 .adp-mark .b1{clip-path:inset(0 70% 53% 30%)}
 .adp-mark .b2{clip-path:inset(47% 100% 13.5% 0)}
 .adp-mark .b3{clip-path:inset(86.5% 0 0 0); opacity:0}
-html.adp-draw .adp-mark .b1{animation:adp-b1 900ms var(--ease-in-out) both}
-html.adp-draw .adp-mark .b2{animation:adp-b2 1200ms var(--ease-in-out) 450ms both}
-html.adp-draw .adp-mark .b3{animation:adp-up 600ms var(--ease-out) 1350ms both}
+html.adp-draw .adp-mark .b1{animation:adp-b1 700ms var(--ease-in-out) both}
+html.adp-draw .adp-mark .b2{animation:adp-b2 900ms var(--ease-in-out) 350ms both}
+html.adp-draw .adp-mark .b3{animation:adp-up 450ms var(--ease-out) 1050ms both}
 @keyframes adp-b1{from{clip-path:inset(0 70% 53% 30%)}to{clip-path:inset(0 30% 53% 30%)}}
 @keyframes adp-b2{from{clip-path:inset(47% 100% 13.5% 0)}to{clip-path:inset(47% 0 13.5% 0)}}
 
@@ -35,6 +79,19 @@ html.adp-pre [data-intro="ch"]{animation-name:adp-ch; animation-duration:650ms}
 html.adp-pre [data-intro="hdr"]{animation-name:adp-down}
 html.adp-pre [data-intro="fade"]{animation-name:adp-fade}
 @keyframes adp-fade{from{opacity:0}to{opacity:1}}
+html.adp-fast.adp-pre [data-intro]{animation-name:adp-fade !important; animation-duration:450ms !important; animation-delay:0ms !important}
+
+/* Ajustes de celular */
+[data-hero-sub], [data-hero-hours]{text-wrap:balance}
+[data-social]{display:grid; grid-template-columns:repeat(3,auto); justify-content:center}
+[data-social] > a{justify-content:center}
+@media (max-width:600px){
+  [data-hdrcarta]{display:none !important}
+  [data-mhide]{display:none}
+}
+@media (max-width:520px){
+  [data-social]{grid-template-columns:minmax(0,280px)}
+}
 @keyframes adp-up{from{opacity:0; transform:translateY(14px)}to{opacity:1; transform:none}}
 @keyframes adp-down{from{opacity:0; transform:translateY(-12px)}to{opacity:1; transform:none}}
 @keyframes adp-bg{from{opacity:0; transform:scale(1.1)}to{opacity:1; transform:none}}
@@ -87,7 +144,10 @@ html.adp-rv [data-rv]:not([data-in]) [data-l^="vapor"]{animation-play-state:paus
   var d = document, h = d.documentElement;
   var mq = function (q) { try { return matchMedia(q).matches; } catch (e) { return false; } };
   var reduce = mq('(prefers-reduced-motion: reduce)');
-  h.classList.add('adp-pre', 'adp-loading');
+  var seen = false;
+  try { seen = sessionStorage.getItem('adp-visto') === '1'; } catch (e) {}
+  h.classList.add('adp-pre');
+  if (seen) h.classList.add('adp-fast'); else h.classList.add('adp-loading');
   if ('IntersectionObserver' in window) h.classList.add('adp-rv');
 
   // Smooth scroll: se crea detenido y arranca cuando termina la pantalla de carga
@@ -118,18 +178,19 @@ html.adp-rv [data-rv]:not([data-in]) [data-l^="vapor"]{animation-play-state:paus
   };
 
   var photo = load(mq('(max-width:600px)') ? 'assets/foto-fachada-movil.jpg' : 'assets/foto-fachada.jpg');
-  var drawn = Promise.race([load('assets/logo-cafe-libros.png'), wait(1200)]).then(function () {
+  var drawn = seen ? Promise.resolve() : Promise.race([load('assets/logo-cafe-libros.png'), wait(1200)]).then(function () {
     h.classList.add('adp-draw');
-    return wait(reduce ? 700 : 2000);
+    return wait(reduce ? 700 : 1600);
   });
-  var ready = Promise.all([drawn, Promise.race([photo, wait(5000)]), until(function () { return d.getElementById('inicio'); }, 6000)])
-    .then(function () { return until(scriptFont, reduce ? 600 : 1800); });
+  var ready = Promise.all([drawn, Promise.race([photo, wait(seen ? 2500 : 5000)]), until(function () { return d.getElementById('inicio'); }, 6000)])
+    .then(function () { return until(scriptFont, reduce || seen ? 600 : 1800); });
 
   var done = false;
   var go = function () {
     if (done) return;
     done = true;
     h.classList.add('adp-go');
+    try { sessionStorage.setItem('adp-visto', '1'); } catch (e) {}
     var el = d.getElementById('adp-loader');
     if (el) el.classList.add('is-out');
     setTimeout(function () {
@@ -137,7 +198,7 @@ html.adp-rv [data-rv]:not([data-in]) [data-l^="vapor"]{animation-play-state:paus
       if (el && el.parentNode) el.parentNode.removeChild(el);
       if (window.adpLenis && !d.body.style.overflow) window.adpLenis.start();
     }, 800);
-    setTimeout(function () { h.classList.remove('adp-pre', 'adp-go'); }, reduce ? 1200 : 3800);
+    setTimeout(function () { h.classList.remove('adp-pre', 'adp-go', 'adp-fast'); }, seen ? 900 : reduce ? 1200 : 2900);
   };
   ready.then(go, go);
   setTimeout(go, 8000);
@@ -185,9 +246,9 @@ button{font-family:inherit; cursor:pointer}
 
 <div style="position:fixed; inset:0; z-index:60; pointer-events:none; opacity:var(--grain); mix-blend-mode:multiply; background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E&quot;); background-size:200px 200px"></div>
 
-<header data-hdr data-intro="hdr" data-screen-label="Header" style="animation-delay:1100ms; position:fixed; top:0; left:0; right:0; z-index:50; display:flex; align-items:center; justify-content:space-between; gap:18px; padding:18px clamp(16px,4vw,44px); background:transparent; border-bottom:1px solid transparent">
+<header data-hdr data-intro="hdr" data-screen-label="Header" style="animation-delay:700ms; position:fixed; top:0; left:0; right:0; z-index:50; display:flex; align-items:center; justify-content:space-between; gap:18px; padding:18px clamp(16px,4vw,44px); background:transparent; border-bottom:1px solid transparent">
   <a href="#inicio" aria-label="Alma de Poeta" style="display:block; flex:0 0 auto">
-    <span style="display:block; width:clamp(122px,17vw,168px); height:clamp(25px,3.4vw,34px); background:var(--hdr-ink); -webkit-mask-image:url(assets/logo-wordmark.png); mask-image:url(assets/logo-wordmark.png); -webkit-mask-size:contain; mask-size:contain; -webkit-mask-repeat:no-repeat; mask-repeat:no-repeat; -webkit-mask-position:left center; mask-position:left center"></span>
+    <span style="display:block; width:clamp(122px,17vw,168px); height:clamp(25px,3.4vw,34px); background:var(--hdr-ink); -webkit-mask-image:url(assets/logo-firma.png); mask-image:url(assets/logo-firma.png); -webkit-mask-size:contain; mask-size:contain; -webkit-mask-repeat:no-repeat; mask-repeat:no-repeat; -webkit-mask-position:left center; mask-position:left center"></span>
   </a>
   <nav data-navlinks style="display:flex; align-items:center; gap:clamp(14px,2.3vw,30px)">
     <a href="#nosotros" style="font:500 13px/1 'Alegreya Sans',sans-serif; letter-spacing:.2em; text-transform:uppercase; color:var(--hdr-ink)"><span style="display:var(--i-es)">Nosotros</span><span style="display:var(--i-en)">About</span></a>
@@ -200,7 +261,7 @@ button{font-family:inherit; cursor:pointer}
       <button data-lang="es" onClick="{{ setEs }}" style="appearance:none; border:0; background:var(--hdr-ink); color:var(--hdr-on); font:700 11px/1 'Alegreya Sans',sans-serif; letter-spacing:.16em; padding:10px 11px; min-height:34px">ES</button>
       <button data-lang="en" onClick="{{ setEn }}" style="appearance:none; border:0; background:transparent; color:var(--hdr-ink); font:700 11px/1 'Alegreya Sans',sans-serif; letter-spacing:.16em; padding:10px 11px; min-height:34px">EN</button>
     </div>
-    <button onClick="{{ openCarta }}" style="appearance:none; border:1px solid var(--hdr-btn-bg); background:var(--hdr-btn-bg); color:var(--hdr-on); font:700 12px/1 'Alegreya Sans',sans-serif; letter-spacing:.18em; text-transform:uppercase; white-space:nowrap; padding:13px 20px; min-height:42px; border-radius:2px; transition:background-color .48s ease-in-out, color .48s ease-in-out, transform .25s ease" style-hover="background:var(--hdr-btn-bg); transform:translateY(-1px); opacity:.86"><span style="display:var(--i-es)">Ver la carta</span><span style="display:var(--i-en)">See the menu</span></button>
+    <button data-hdrcarta onClick="{{ openCarta }}" style="appearance:none; border:1px solid var(--hdr-btn-bg); background:var(--hdr-btn-bg); color:var(--hdr-on); font:700 12px/1 'Alegreya Sans',sans-serif; letter-spacing:.18em; text-transform:uppercase; white-space:nowrap; padding:13px 20px; min-height:42px; border-radius:2px; transition:background-color .48s ease-in-out, color .48s ease-in-out, transform .25s ease" style-hover="background:var(--hdr-btn-bg); transform:translateY(-1px); opacity:.86"><span style="display:var(--i-es)">Ver la carta</span><span style="display:var(--i-en)">See the menu</span></button>
     <button data-menubtn onClick="{{ openDrawer }}" aria-label="Menú" style="display:none; appearance:none; align-items:center; justify-content:center; width:44px; height:44px; border:1px solid var(--hdr-rule); border-radius:2px; background:transparent; color:var(--hdr-ink)">
       <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h16"></path></svg>
     </button>
@@ -218,15 +279,15 @@ button{font-family:inherit; cursor:pointer}
   <div style="position:absolute; inset:0; background:var(--tint); mix-blend-mode:soft-light"></div>
   <div data-hero style="position:relative; z-index:2; display:flex; flex-direction:column; align-items:center; gap:clamp(14px,2.4vh,24px); max-width:min(880px,94vw)">
     <div style="filter:drop-shadow(0 2px 16px rgba(0,0,0,.55)); margin-bottom:clamp(2px,1vh,10px)">
-      <div data-intro="logo" style="animation-delay:900ms"><span role="img" aria-label="Alma de Poeta café &amp; libros" style="display:block; width:clamp(250px,64vw,460px); aspect-ratio:1156/419; background:#F6EFDF; -webkit-mask-image:url(assets/logo-cafe-libros.png); mask-image:url(assets/logo-cafe-libros.png); -webkit-mask-size:contain; mask-size:contain; -webkit-mask-repeat:no-repeat; mask-repeat:no-repeat; -webkit-mask-position:center; mask-position:center"></span></div>
+      <div data-intro="logo" style="animation-delay:600ms"><h1 style="margin:0"><span style="position:absolute; width:1px; height:1px; margin:-1px; padding:0; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; border:0">Alma de Poeta, café y libros en Cercado de Lima</span><span aria-hidden="true" style="display:block; width:clamp(250px,64vw,460px); aspect-ratio:1156/419; background:#F6EFDF; -webkit-mask-image:url(assets/logo-cafe-libros.png); mask-image:url(assets/logo-cafe-libros.png); -webkit-mask-size:contain; mask-size:contain; -webkit-mask-repeat:no-repeat; mask-repeat:no-repeat; -webkit-mask-position:center; mask-position:center"></span></h1></div>
     </div>
-    <p style="margin:0; font:400 clamp(27px,5.4vw,50px)/1.2 'Pinyon Script',cursive; color:#F6EFDF; text-shadow:0 2px 24px rgba(0,0,0,.45)"><span style="display:var(--i-es)"><span style="white-space:nowrap"><span data-intro="ch" style="animation-delay:1300ms">u</span><span data-intro="ch" style="animation-delay:1328ms">n</span></span> <span style="white-space:nowrap"><span data-intro="ch" style="animation-delay:1356ms">e</span><span data-intro="ch" style="animation-delay:1384ms">s</span><span data-intro="ch" style="animation-delay:1412ms">p</span><span data-intro="ch" style="animation-delay:1440ms">a</span><span data-intro="ch" style="animation-delay:1468ms">c</span><span data-intro="ch" style="animation-delay:1496ms">i</span><span data-intro="ch" style="animation-delay:1524ms">o</span></span> <span style="white-space:nowrap"><span data-intro="ch" style="animation-delay:1552ms">d</span><span data-intro="ch" style="animation-delay:1580ms">e</span></span> <span style="white-space:nowrap"><span data-intro="ch" style="animation-delay:1608ms">f</span><span data-intro="ch" style="animation-delay:1636ms">a</span><span data-intro="ch" style="animation-delay:1664ms">m</span><span data-intro="ch" style="animation-delay:1692ms">i</span><span data-intro="ch" style="animation-delay:1720ms">l</span><span data-intro="ch" style="animation-delay:1748ms">i</span><span data-intro="ch" style="animation-delay:1776ms">a</span><span data-intro="ch" style="animation-delay:1804ms">,</span></span> <span style="white-space:nowrap"><span data-intro="ch" style="animation-delay:1832ms">a</span><span data-intro="ch" style="animation-delay:1860ms">m</span><span data-intro="ch" style="animation-delay:1888ms">i</span><span data-intro="ch" style="animation-delay:1916ms">g</span><span data-intro="ch" style="animation-delay:1944ms">o</span><span data-intro="ch" style="animation-delay:1972ms">s</span></span> <span style="white-space:nowrap"><span data-intro="ch" style="animation-delay:2000ms">y</span></span> <span style="white-space:nowrap"><span data-intro="ch" style="animation-delay:2028ms">l</span><span data-intro="ch" style="animation-delay:2056ms">i</span><span data-intro="ch" style="animation-delay:2084ms">b</span><span data-intro="ch" style="animation-delay:2112ms">r</span><span data-intro="ch" style="animation-delay:2140ms">o</span><span data-intro="ch" style="animation-delay:2168ms">s</span></span></span><span style="display:var(--i-en)"><span style="white-space:nowrap"><span data-intro="ch" style="animation-delay:1300ms">a</span></span> <span style="white-space:nowrap"><span data-intro="ch" style="animation-delay:1328ms">p</span><span data-intro="ch" style="animation-delay:1356ms">l</span><span data-intro="ch" style="animation-delay:1384ms">a</span><span data-intro="ch" style="animation-delay:1412ms">c</span><span data-intro="ch" style="animation-delay:1440ms">e</span></span> <span style="white-space:nowrap"><span data-intro="ch" style="animation-delay:1468ms">f</span><span data-intro="ch" style="animation-delay:1496ms">o</span><span data-intro="ch" style="animation-delay:1524ms">r</span></span> <span style="white-space:nowrap"><span data-intro="ch" style="animation-delay:1552ms">f</span><span data-intro="ch" style="animation-delay:1580ms">a</span><span data-intro="ch" style="animation-delay:1608ms">m</span><span data-intro="ch" style="animation-delay:1636ms">i</span><span data-intro="ch" style="animation-delay:1664ms">l</span><span data-intro="ch" style="animation-delay:1692ms">y</span><span data-intro="ch" style="animation-delay:1720ms">,</span></span> <span style="white-space:nowrap"><span data-intro="ch" style="animation-delay:1748ms">f</span><span data-intro="ch" style="animation-delay:1776ms">r</span><span data-intro="ch" style="animation-delay:1804ms">i</span><span data-intro="ch" style="animation-delay:1832ms">e</span><span data-intro="ch" style="animation-delay:1860ms">n</span><span data-intro="ch" style="animation-delay:1888ms">d</span><span data-intro="ch" style="animation-delay:1916ms">s</span></span> <span style="white-space:nowrap"><span data-intro="ch" style="animation-delay:1944ms">a</span><span data-intro="ch" style="animation-delay:1972ms">n</span><span data-intro="ch" style="animation-delay:2000ms">d</span></span> <span style="white-space:nowrap"><span data-intro="ch" style="animation-delay:2028ms">b</span><span data-intro="ch" style="animation-delay:2056ms">o</span><span data-intro="ch" style="animation-delay:2084ms">o</span><span data-intro="ch" style="animation-delay:2112ms">k</span><span data-intro="ch" style="animation-delay:2140ms">s</span></span></span></p>
-    <p data-intro="up" style="margin:0; font:500 clamp(11px,2.1vw,13px)/1.9 'Alegreya Sans',sans-serif; letter-spacing:.34em; text-transform:uppercase; color:rgba(246,239,223,.9); animation-delay:2050ms"><span style="display:var(--i-es)">Café · Librería · Restaurante — Cercado de Lima</span><span style="display:var(--i-en)">Coffee · Bookshop · Restaurant — Lima, Perú</span></p>
+    <p style="margin:0; font:400 clamp(27px,5.4vw,50px)/1.2 'Pinyon Script',cursive; color:#F6EFDF; text-shadow:0 2px 24px rgba(0,0,0,.45)"><span style="display:var(--i-es)"><span style="white-space:nowrap"><span data-intro="ch" style="animation-delay:900ms">u</span><span data-intro="ch" style="animation-delay:922ms">n</span></span> <span style="white-space:nowrap"><span data-intro="ch" style="animation-delay:944ms">e</span><span data-intro="ch" style="animation-delay:966ms">s</span><span data-intro="ch" style="animation-delay:988ms">p</span><span data-intro="ch" style="animation-delay:1010ms">a</span><span data-intro="ch" style="animation-delay:1032ms">c</span><span data-intro="ch" style="animation-delay:1054ms">i</span><span data-intro="ch" style="animation-delay:1076ms">o</span></span> <span style="white-space:nowrap"><span data-intro="ch" style="animation-delay:1098ms">d</span><span data-intro="ch" style="animation-delay:1120ms">e</span></span> <span style="white-space:nowrap"><span data-intro="ch" style="animation-delay:1142ms">f</span><span data-intro="ch" style="animation-delay:1164ms">a</span><span data-intro="ch" style="animation-delay:1186ms">m</span><span data-intro="ch" style="animation-delay:1208ms">i</span><span data-intro="ch" style="animation-delay:1230ms">l</span><span data-intro="ch" style="animation-delay:1252ms">i</span><span data-intro="ch" style="animation-delay:1274ms">a</span><span data-intro="ch" style="animation-delay:1296ms">,</span></span> <span style="white-space:nowrap"><span data-intro="ch" style="animation-delay:1318ms">a</span><span data-intro="ch" style="animation-delay:1340ms">m</span><span data-intro="ch" style="animation-delay:1362ms">i</span><span data-intro="ch" style="animation-delay:1384ms">g</span><span data-intro="ch" style="animation-delay:1406ms">o</span><span data-intro="ch" style="animation-delay:1428ms">s</span></span> <span style="white-space:nowrap"><span data-intro="ch" style="animation-delay:1450ms">y</span></span> <span style="white-space:nowrap"><span data-intro="ch" style="animation-delay:1472ms">l</span><span data-intro="ch" style="animation-delay:1494ms">i</span><span data-intro="ch" style="animation-delay:1516ms">b</span><span data-intro="ch" style="animation-delay:1538ms">r</span><span data-intro="ch" style="animation-delay:1560ms">o</span><span data-intro="ch" style="animation-delay:1582ms">s</span></span></span><span style="display:var(--i-en)"><span style="white-space:nowrap"><span data-intro="ch" style="animation-delay:900ms">a</span></span> <span style="white-space:nowrap"><span data-intro="ch" style="animation-delay:922ms">p</span><span data-intro="ch" style="animation-delay:944ms">l</span><span data-intro="ch" style="animation-delay:966ms">a</span><span data-intro="ch" style="animation-delay:988ms">c</span><span data-intro="ch" style="animation-delay:1010ms">e</span></span> <span style="white-space:nowrap"><span data-intro="ch" style="animation-delay:1032ms">f</span><span data-intro="ch" style="animation-delay:1054ms">o</span><span data-intro="ch" style="animation-delay:1076ms">r</span></span> <span style="white-space:nowrap"><span data-intro="ch" style="animation-delay:1098ms">f</span><span data-intro="ch" style="animation-delay:1120ms">a</span><span data-intro="ch" style="animation-delay:1142ms">m</span><span data-intro="ch" style="animation-delay:1164ms">i</span><span data-intro="ch" style="animation-delay:1186ms">l</span><span data-intro="ch" style="animation-delay:1208ms">y</span><span data-intro="ch" style="animation-delay:1230ms">,</span></span> <span style="white-space:nowrap"><span data-intro="ch" style="animation-delay:1252ms">f</span><span data-intro="ch" style="animation-delay:1274ms">r</span><span data-intro="ch" style="animation-delay:1296ms">i</span><span data-intro="ch" style="animation-delay:1318ms">e</span><span data-intro="ch" style="animation-delay:1340ms">n</span><span data-intro="ch" style="animation-delay:1362ms">d</span><span data-intro="ch" style="animation-delay:1384ms">s</span></span> <span style="white-space:nowrap"><span data-intro="ch" style="animation-delay:1406ms">a</span><span data-intro="ch" style="animation-delay:1428ms">n</span><span data-intro="ch" style="animation-delay:1450ms">d</span></span> <span style="white-space:nowrap"><span data-intro="ch" style="animation-delay:1472ms">b</span><span data-intro="ch" style="animation-delay:1494ms">o</span><span data-intro="ch" style="animation-delay:1516ms">o</span><span data-intro="ch" style="animation-delay:1538ms">k</span><span data-intro="ch" style="animation-delay:1560ms">s</span></span></span></p>
+    <p data-intro="up" data-hero-sub style="margin:0; font:500 clamp(11px,2.1vw,13px)/1.9 'Alegreya Sans',sans-serif; letter-spacing:.34em; text-transform:uppercase; color:rgba(246,239,223,.9); animation-delay:1450ms"><span style="display:var(--i-es)">Café · Librería · Restaurante<span data-mhide> — Cercado de Lima</span></span><span style="display:var(--i-en)">Coffee · Bookshop · Restaurant<span data-mhide> — Lima, Perú</span></span></p>
     <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:12px; margin-top:6px">
-      <div data-intro="up" style="display:flex; animation-delay:2200ms"><button onClick="{{ openCarta }}" style="appearance:none; border:1px solid #F6EFDF; background:#F6EFDF; color:#1E1B17; font:700 12.5px/1 'Alegreya Sans',sans-serif; letter-spacing:.2em; text-transform:uppercase; white-space:nowrap; padding:17px 30px; min-height:52px; border-radius:2px; transition:transform .25s ease, background-color .25s ease" style-hover="transform:translateY(-2px); background:#FFFFFF"><span style="display:var(--i-es)">Ver la carta</span><span style="display:var(--i-en)">See the menu</span></button></div>
-      <div data-intro="up" style="display:flex; animation-delay:2280ms"><a href="#ubicacion" style="display:inline-flex; align-items:center; border:1px solid rgba(246,239,223,.55); color:#F6EFDF; font:700 12.5px/1 'Alegreya Sans',sans-serif; letter-spacing:.2em; text-transform:uppercase; white-space:nowrap; padding:17px 30px; min-height:52px; border-radius:2px; transition:border-color .25s ease, transform .25s ease" style-hover="border-color:#F6EFDF; transform:translateY(-2px); color:#FFFFFF"><span style="display:var(--i-es)">Cómo llegar</span><span style="display:var(--i-en)">How to get here</span></a></div>
+      <div data-intro="up" style="display:flex; animation-delay:1550ms"><button onClick="{{ openCarta }}" style="appearance:none; border:1px solid #F6EFDF; background:#F6EFDF; color:#1E1B17; font:700 12.5px/1 'Alegreya Sans',sans-serif; letter-spacing:.2em; text-transform:uppercase; white-space:nowrap; padding:17px 30px; min-height:52px; border-radius:2px; transition:transform .25s ease, background-color .25s ease" style-hover="transform:translateY(-2px); background:#FFFFFF"><span style="display:var(--i-es)">Ver la carta</span><span style="display:var(--i-en)">See the menu</span></button></div>
+      <div data-intro="up" style="display:flex; animation-delay:1610ms"><a href="#ubicacion" style="display:inline-flex; align-items:center; border:1px solid rgba(246,239,223,.55); color:#F6EFDF; font:700 12.5px/1 'Alegreya Sans',sans-serif; letter-spacing:.2em; text-transform:uppercase; white-space:nowrap; padding:17px 30px; min-height:52px; border-radius:2px; transition:border-color .25s ease, transform .25s ease" style-hover="border-color:#F6EFDF; transform:translateY(-2px); color:#FFFFFF"><span style="display:var(--i-es)">Cómo llegar</span><span style="display:var(--i-en)">How to get here</span></a></div>
     </div>
-    <p data-intro="up" style="margin:8px 0 0; font:400 clamp(13px,2.4vw,15px)/1.7 'Spectral',serif; color:rgba(246,239,223,.82); animation-delay:2400ms"><span style="display:var(--i-es)">Lun a Mié 5:00–10:00 pm · Jue a Sáb 5:00–11:00 pm · Dom cerrado</span><span style="display:var(--i-en)">Mon–Wed 5–10 pm · Thu–Sat 5–11 pm · Closed Sunday</span></p>
+    <p data-intro="up" data-hero-hours style="margin:8px 0 0; font:400 clamp(13px,2.4vw,15px)/1.7 'Spectral',serif; color:rgba(246,239,223,.82); animation-delay:1700ms"><span style="display:var(--i-es)"><span style="white-space:nowrap">Lun a Mié 5:00–10:00 pm</span> · <span style="white-space:nowrap">Jue a Sáb 5:00–11:00 pm</span> · <span style="white-space:nowrap">Dom cerrado</span></span><span style="display:var(--i-en)"><span style="white-space:nowrap">Mon–Wed 5–10 pm</span> · <span style="white-space:nowrap">Thu–Sat 5–11 pm</span> · <span style="white-space:nowrap">Closed Sunday</span></span></p>
   </div>
 </section>
 
@@ -370,13 +431,15 @@ button{font-family:inherit; cursor:pointer}
       </div>
     </div>
     <div style="position:relative; min-height:clamp(300px,45vw,520px); border:1px solid var(--rule); background:var(--bg-2)">
-      <iframe src="https://maps.google.com/maps?q=-12.0571421,-77.0779192&amp;z=17&amp;hl=es&amp;output=embed" title="Mapa de Alma de Poeta" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; border:0; filter:sepia(.3) saturate(.85) contrast(1.04)"></iframe>
+      <div aria-hidden="true" style="position:absolute; inset:0; display:grid; place-content:center; justify-items:center; gap:10px; color:var(--ink-soft); font:italic 400 15px/1.4 'Spectral',serif"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"></path><circle cx="12" cy="10" r="2.6"></circle></svg><span><span style="display:var(--i-es)">Cargando el mapa…</span><span style="display:var(--i-en)">Loading map…</span></span></div>
+      <iframe src="https://maps.google.com/maps?q=Alma+de+Poeta+caf%C3%A9+%26+libros,+Jr.+Ar%C3%ADstides+del+Carpio+Mu%C3%B1oz+1679,+Cercado+de+Lima&amp;z=17&amp;hl=es&amp;output=embed" title="Mapa de Alma de Poeta" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; border:0; filter:sepia(.3) saturate(.85) contrast(1.04)"></iframe>
     </div>
   </div>
 </section>
 
 <section id="contacto" data-screen-label="Redes y contacto" style="position:relative; padding:clamp(72px,11vh,132px) clamp(20px,5vw,56px); background:var(--bg-2); border-top:1px solid var(--rule)">
   <div data-rv style="max-width:900px; margin:0 auto; text-align:center">
+    <span aria-hidden="true" style="display:block; width:clamp(128px,15vw,172px); aspect-ratio:445/190; margin:0 auto clamp(20px,3vw,28px); background:var(--accent); -webkit-mask:url(assets/ilustracion-local.png) center/contain no-repeat; mask:url(assets/ilustracion-local.png) center/contain no-repeat"></span>
     <p style="margin:0 0 14px; font:700 12px/1 'Alegreya Sans',sans-serif; letter-spacing:.32em; text-transform:uppercase; color:var(--accent)"><span style="display:var(--i-es)">Escríbenos</span><span style="display:var(--i-en)">Say hello</span></p>
     <h2 style="margin:0 0 18px; font:600 clamp(28px,4.4vw,46px)/1.14 'Spectral',serif; color:var(--ink)"><span style="display:var(--i-es)">Reserva una mesa o pregúntanos lo que quieras</span><span style="display:var(--i-en)">Book a table or ask us anything</span></h2>
     <p style="margin:0 auto clamp(30px,4.5vw,42px); max-width:560px; font:400 clamp(16px,2.1vw,18px)/1.7 'Alegreya Sans',sans-serif; color:var(--ink-soft)"><span style="display:var(--i-es)">Respondemos por WhatsApp en horario de atención. También estamos en redes como @almadepoetaperu.</span><span style="display:var(--i-en)">We answer on WhatsApp during opening hours. We are also @almadepoetaperu on social media.</span></p>
@@ -384,7 +447,7 @@ button{font-family:inherit; cursor:pointer}
       <span style="width:18px; height:18px; background:currentColor; -webkit-mask-image:url(https://cdn.simpleicons.org/whatsapp); mask-image:url(https://cdn.simpleicons.org/whatsapp); -webkit-mask-size:contain; mask-size:contain; -webkit-mask-repeat:no-repeat; mask-repeat:no-repeat; -webkit-mask-position:center; mask-position:center"></span>
       +51 981 594 659
     </a>
-    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:clamp(10px,2vw,18px); margin-top:clamp(36px,5vw,52px); padding-top:clamp(30px,4vw,40px); border-top:1px solid var(--rule)">
+    <div data-social style="gap:clamp(10px,2vw,18px); margin-top:clamp(36px,5vw,52px); padding-top:clamp(30px,4vw,40px); border-top:1px solid var(--rule)">
       <a href="https://instagram.com/almadepoetaperu" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:11px; border:1px solid var(--rule); color:var(--ink); font:500 14px/1 'Alegreya Sans',sans-serif; letter-spacing:.1em; padding:15px 22px; min-height:50px; border-radius:2px; transition:border-color .3s ease, transform .25s ease, color .48s ease-in-out" style-hover="border-color:var(--ink); transform:translateY(-2px); color:var(--accent)">
         <span style="width:17px; height:17px; background:currentColor; -webkit-mask-image:url(https://cdn.simpleicons.org/instagram); mask-image:url(https://cdn.simpleicons.org/instagram); -webkit-mask-size:contain; mask-size:contain; -webkit-mask-repeat:no-repeat; mask-repeat:no-repeat"></span>Instagram
       </a>
@@ -402,32 +465,35 @@ button{font-family:inherit; cursor:pointer}
 <footer style="position:relative; padding:clamp(48px,7vh,80px) clamp(20px,5vw,56px) clamp(80px,9vh,96px); background:var(--bg); border-top:1px solid var(--rule); overflow:hidden">
   <div style="position:absolute; inset:0; pointer-events:none; opacity:.22; mix-blend-mode:overlay; background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200'%3E%3Cfilter id='w'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.006 0.42' numOctaves='4'/%3E%3C/filter%3E%3Crect width='400' height='200' filter='url(%23w)'/%3E%3C/svg%3E&quot;)"></div>
   <div style="position:relative; display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr)); gap:clamp(28px,4vw,48px); align-items:center; max-width:1180px; margin:0 auto">
-    <span style="display:block; width:clamp(150px,20vw,210px); height:clamp(30px,4vw,42px); background:var(--ink); -webkit-mask-image:url(assets/logo-wordmark.png); mask-image:url(assets/logo-wordmark.png); -webkit-mask-size:contain; mask-size:contain; -webkit-mask-repeat:no-repeat; mask-repeat:no-repeat; -webkit-mask-position:left center; mask-position:left center"></span>
+    <span role="img" aria-label="Alma de Poeta café &amp; libros" style="display:block; width:clamp(160px,20vw,220px); aspect-ratio:1154/212; background:var(--ink); -webkit-mask-image:url(assets/logo-firma-cafe-libros.png); mask-image:url(assets/logo-firma-cafe-libros.png); -webkit-mask-size:contain; mask-size:contain; -webkit-mask-repeat:no-repeat; mask-repeat:no-repeat; -webkit-mask-position:left center; mask-position:left center"></span>
     <p style="margin:0; font:400 14.5px/1.8 'Alegreya Sans',sans-serif; color:var(--ink-soft)">Jr. Arístides del Carpio Muñoz 1679<br>Urb. Los Cipreses, Cercado de Lima</p>
     <p style="margin:0; font:400 14.5px/1.8 'Alegreya Sans',sans-serif; color:var(--ink-soft)"><span style="display:var(--i-es)">Lun–Mié 5–10 pm · Jue–Sáb 5–11 pm<br>Domingo cerrado</span><span style="display:var(--i-en)">Mon–Wed 5–10 pm · Thu–Sat 5–11 pm<br>Closed Sunday</span></p>
+    <div style="display:flex; flex-direction:column; gap:12px">
+      <span style="font:700 11px/1 'Alegreya Sans',sans-serif; letter-spacing:.24em; text-transform:uppercase; color:var(--accent)"><span style="display:var(--i-es)">Colores del sitio</span><span style="display:var(--i-en)">Site colours</span></span>
+      <div data-rail style="display:flex; gap:12px">
+  <button data-pal="clasica" onClick="{{ setClasica }}" aria-label="Paleta clásica" title="Clásica" style="appearance:none; width:34px; height:34px; border-radius:50%; border:1px solid rgba(30,27,23,.35); background:#F7F1E3; position:relative; padding:0">
+      <span style="position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:12px; height:12px; border-radius:50%; background:#1E1B17"></span>
+    </button>
+    <button data-pal="verde" onClick="{{ setVerde }}" aria-label="Paleta verde y dorado" title="Verde + dorado" style="appearance:none; width:34px; height:34px; border-radius:50%; border:1px solid rgba(30,27,23,.35); background:#1B5C44; position:relative; padding:0">
+      <span style="position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:12px; height:12px; border-radius:50%; background:#E8BE55"></span>
+    </button>
+    <button data-pal="dorado" onClick="{{ setDorado }}" aria-label="Paleta dorado y verde" title="Dorado + verde" style="appearance:none; width:34px; height:34px; border-radius:50%; border:1px solid rgba(30,27,23,.35); background:#D9A63B; position:relative; padding:0">
+      <span style="position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:12px; height:12px; border-radius:50%; background:#13402F"></span>
+    </button>
+      </div>
+    </div>
   </div>
 </footer>
 
-<div data-rail data-intro="fade" style="animation-delay:2550ms; position:fixed; left:clamp(14px,2.5vw,26px); bottom:clamp(16px,3vw,26px); z-index:55; display:flex; flex-direction:column; gap:10px; padding:11px; background:var(--panel); border:1px solid var(--rule); border-radius:999px; box-shadow:0 14px 34px -18px var(--shadow)">
-  <button data-pal="clasica" onClick="{{ setClasica }}" aria-label="Paleta clásica" title="Clásica" style="appearance:none; width:34px; height:34px; border-radius:50%; border:1px solid rgba(30,27,23,.35); background:#F7F1E3; position:relative; padding:0">
-    <span style="position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:12px; height:12px; border-radius:50%; background:#1E1B17"></span>
-  </button>
-  <button data-pal="verde" onClick="{{ setVerde }}" aria-label="Paleta verde y dorado" title="Verde + dorado" style="appearance:none; width:34px; height:34px; border-radius:50%; border:1px solid rgba(30,27,23,.35); background:#1B5C44; position:relative; padding:0">
-    <span style="position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:12px; height:12px; border-radius:50%; background:#E8BE55"></span>
-  </button>
-  <button data-pal="dorado" onClick="{{ setDorado }}" aria-label="Paleta dorado y verde" title="Dorado + verde" style="appearance:none; width:34px; height:34px; border-radius:50%; border:1px solid rgba(30,27,23,.35); background:#D9A63B; position:relative; padding:0">
-    <span style="position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:12px; height:12px; border-radius:50%; background:#13402F"></span>
-  </button>
-</div>
 
-<a href="{{ waHref }}" target="_blank" rel="noopener" aria-label="WhatsApp" data-intro="fade" style="animation-delay:2550ms; position:fixed; right:clamp(14px,2.5vw,26px); bottom:clamp(16px,3vw,26px); z-index:55; display:inline-flex; align-items:center; gap:10px; padding:0 20px; height:56px; background:var(--btn-bg); color:var(--btn-ink); border:1px solid var(--ink); border-radius:999px; font:700 12.5px/1 'Alegreya Sans',sans-serif; letter-spacing:.16em; text-transform:uppercase; box-shadow:0 16px 36px -18px var(--shadow); transition:background-color .48s ease-in-out, transform .25s ease" style-hover="transform:translateY(-3px); background:var(--btn-bg-h); color:var(--btn-ink)">
+<a href="{{ waHref }}" target="_blank" rel="noopener" aria-label="WhatsApp" data-intro="fade" style="animation-delay:1800ms; position:fixed; right:clamp(14px,2.5vw,26px); bottom:clamp(16px,3vw,26px); z-index:55; display:inline-flex; align-items:center; gap:10px; padding:0 20px; height:56px; background:var(--btn-bg); color:var(--btn-ink); border:1px solid var(--ink); border-radius:999px; font:700 12.5px/1 'Alegreya Sans',sans-serif; letter-spacing:.16em; text-transform:uppercase; box-shadow:0 16px 36px -18px var(--shadow); transition:background-color .48s ease-in-out, transform .25s ease" style-hover="transform:translateY(-3px); background:var(--btn-bg-h); color:var(--btn-ink)">
   <span style="width:20px; height:20px; background:currentColor; -webkit-mask-image:url(https://cdn.simpleicons.org/whatsapp); mask-image:url(https://cdn.simpleicons.org/whatsapp); -webkit-mask-size:contain; mask-size:contain; -webkit-mask-repeat:no-repeat; mask-repeat:no-repeat; mask-position:center"></span>
   WhatsApp
 </a>
 
 <div data-drawer data-lenis-prevent style="position:fixed; inset:0; z-index:70; transform:translateX(var(--dr-x)); transition:transform .45s ease-in-out; background:var(--bg); padding:26px clamp(20px,6vw,40px); display:flex; flex-direction:column; gap:8px">
   <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:22px">
-    <span style="display:block; width:150px; height:30px; background:var(--ink); -webkit-mask-image:url(assets/logo-wordmark.png); mask-image:url(assets/logo-wordmark.png); -webkit-mask-size:contain; mask-size:contain; -webkit-mask-repeat:no-repeat; mask-repeat:no-repeat; -webkit-mask-position:left center; mask-position:left center"></span>
+    <span style="display:block; width:150px; height:30px; background:var(--ink); -webkit-mask-image:url(assets/logo-firma.png); mask-image:url(assets/logo-firma.png); -webkit-mask-size:contain; mask-size:contain; -webkit-mask-repeat:no-repeat; mask-repeat:no-repeat; -webkit-mask-position:left center; mask-position:left center"></span>
     <button onClick="{{ closeDrawer }}" aria-label="Cerrar" style="appearance:none; width:44px; height:44px; border:1px solid var(--rule); border-radius:2px; background:transparent; color:var(--ink)">
       <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M6 6l12 12"></path><path d="M18 6L6 18"></path></svg>
     </button>

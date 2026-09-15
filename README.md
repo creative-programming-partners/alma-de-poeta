@@ -8,5 +8,4 @@ Sitio publicado: https://creative-programming-partners.github.io/alma-de-poeta/
 
 - `index.html` — diseño de la landing (Claude Design, antes `Alma de Poeta.dc.html`)
 - `support.js` — script de soporte del diseño
-- `assets/` — logos y fotografías del local
-- `uploads/` — material de referencia (carta en PDF, fotos y el prompt de diseño)
+- `assets/` — logos, ilustraciones, fotografías e íconos del sitio
