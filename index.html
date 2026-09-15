@@ -101,6 +101,20 @@ html.adp-pre [data-intro="fade"]{animation-name:adp-fade}
 @media (max-width:520px){
   [data-social]{grid-template-columns:minmax(0,280px)}
 }
+
+/* Carta: nombre caligrafico + traduccion legible */
+[data-sub]{font:300 clamp(14px,1.45vw,17px)/1.4 'Spectral',serif; color:var(--paper-soft)}
+[data-dish] > h3,[data-dish] > h4{text-wrap:balance}
+[data-tabs]{scroll-padding-inline:18px}
+@media (max-width:640px){
+  [data-sub]{display:block; margin-top:5px}
+  [data-dash]{display:none}
+  [data-dish]{padding-top:16px !important; padding-bottom:16px !important; column-gap:12px !important}
+  [data-dish] > h3,[data-dish] > h4{line-height:1.32 !important; text-wrap:pretty}
+}
+@media (max-width:420px){
+  [data-dish] > span{align-self:start}
+}
 @keyframes adp-up{from{opacity:0; transform:translateY(14px)}to{opacity:1; transform:none}}
 @keyframes adp-down{from{opacity:0; transform:translateY(-12px)}to{opacity:1; transform:none}}
 @keyframes adp-bg{from{opacity:0; transform:scale(1.1)}to{opacity:1; transform:none}}
@@ -370,18 +384,18 @@ button{font-family:inherit; cursor:pointer}
       <div style="position:relative">
         <p style="margin:0 0 20px; font:400 13px/1 'Spectral',serif; font-style:italic; letter-spacing:.06em; color:var(--paper-accent)"><span style="display:var(--i-es)">Tres de la casa</span><span style="display:var(--i-en)">Three house favourites</span></p>
         <div style="display:grid; gap:18px">
-          <div style="display:grid; grid-template-columns:1fr auto; gap:4px 16px; align-items:baseline; padding-bottom:16px; border-bottom:1px solid var(--paper-rule)">
-            <h3 style="margin:0; font:400 clamp(25px,3.4vw,31px)/1.1 'Pinyon Script',cursive; color:var(--paper-ink)">Poet’s Soul Burger</h3>
+          <div data-dish style="display:grid; grid-template-columns:1fr auto; gap:4px 16px; align-items:baseline; padding-bottom:16px; border-bottom:1px solid var(--paper-rule)">
+            <h3 style="margin:0; font:400 clamp(25px,3.4vw,31px)/1.1 'Pinyon Script',cursive; color:var(--paper-ink)">Poet’s Soul Burger <span data-sub><span data-dash>— </span>Hamburguesa Alma de Poeta</span></h3>
             <span style="font:500 15px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 37.90</span>
             <p style="grid-column:1/-1; margin:6px 0 0; font:300 14.5px/1.55 'Spectral',serif; color:var(--paper-soft)">Mezcla de res, cerdo y tocino, queso cheddar, cebollas caramelizadas, palta y rúgula en pan brioche rojo.</p>
           </div>
-          <div style="display:grid; grid-template-columns:1fr auto; gap:4px 16px; align-items:baseline; padding-bottom:16px; border-bottom:1px solid var(--paper-rule)">
-            <h3 style="margin:0; font:400 clamp(25px,3.4vw,31px)/1.1 'Pinyon Script',cursive; color:var(--paper-ink)">Mozzarella Spring Rolls</h3>
+          <div data-dish style="display:grid; grid-template-columns:1fr auto; gap:4px 16px; align-items:baseline; padding-bottom:16px; border-bottom:1px solid var(--paper-rule)">
+            <h3 style="margin:0; font:400 clamp(25px,3.4vw,31px)/1.1 'Pinyon Script',cursive; color:var(--paper-ink)">Mozzarella Spring Rolls <span data-sub><span data-dash>— </span>Rollitos de mozzarella</span></h3>
             <span style="font:500 15px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 27.90</span>
             <p style="grid-column:1/-1; margin:6px 0 0; font:300 14.5px/1.55 'Spectral',serif; color:var(--paper-soft)">Nueve rollitos de masa wantán con pico de gallo, mozzarella y tocino, con salsa de palta-culantro.</p>
           </div>
           <div style="display:grid; grid-template-columns:1fr auto; gap:4px 16px; align-items:baseline">
-            <h3 style="margin:0; font:400 clamp(25px,3.4vw,31px)/1.1 'Pinyon Script',cursive; color:var(--paper-ink)">Mud Pie</h3>
+            <h3 style="margin:0; font:400 clamp(25px,3.4vw,31px)/1.1 'Pinyon Script',cursive; color:var(--paper-ink)">Mud Pie <span data-sub><span data-dash>— </span>Pie de helado</span></h3>
             <span style="font:500 15px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 18.90</span>
             <p style="grid-column:1/-1; margin:6px 0 0; font:300 14.5px/1.55 'Spectral',serif; color:var(--paper-soft)">Pie de helado de chocolate, café y licor de Baileys con bits de chocolate y pecanas.</p>
           </div>
@@ -597,61 +611,61 @@ button{font-family:inherit; cursor:pointer}
   </div>
   <p style="margin:0 0 20px; font:300 14.5px/1.6 'Spectral',serif; font-style:italic; color:var(--paper-soft)">“Me encanta la comida gringa porque es tan simple y tan adictiva a la vez” — conversaciones con Jess.</p>
   <div style="columns:330px; column-gap:clamp(28px,4vw,48px)">
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Mozzarella Spring Rolls</h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Mozzarella Spring Rolls <span data-sub><span data-dash>— </span>Rollitos de mozzarella</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 27.90</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">9 rollitos de masa wantán rellenas de pico de gallo, abundante queso mozzarella y trocitos de tocino para sumergirlas en dos deliciosas salsas de palta - culantro y salsa oriental dulce.</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Tex Mex Quesadillas</h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Tex Mex Quesadillas <span data-sub><span data-dash>— </span>Quesadillas tex-mex</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 29.90</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Tortillas de harina de trigo rellenas de abundante queso cheddar y mozzarella, servidas con pico de gallo, guacamole y crema acida.</p>
       <p style="grid-column:1/-1; margin:5px 0 0; font:400 12.5px/1.5 'Alegreya Sans',sans-serif; color:var(--paper-accent)">Agregar pollo S/ 6.00 · langostinos jumbo S/ 9.00 · carne S/ 8.00 · tofu a la plancha S/ 6.00</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Crustless Quiche <span style="font:300 17px/1 'Spectral',serif; color:var(--paper-soft)">— Tarta de atún</span></h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Crustless Quiche <span data-sub><span data-dash>— </span>Tarta de atún</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 21.90</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Deliciosa tarta rellena de atún, espinaca, cebolla blanca, huevo, queso y horneada a perfección servida con una deliciosa ensalada verde con aliño de aceite de oliva y vinagre balsámico. Esta tarta es keto.</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Quiche <span style="font:300 17px/1 'Spectral',serif; color:var(--paper-soft)">— Tarta de espinaca, champiñones y choclitos en masa hojaldre</span></h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Quiche <span data-sub><span data-dash>— </span>Tarta de espinaca, champiñones y choclitos en masa hojaldre</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 21.90</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Todo lo de arriba, pero en versión vegetariana servida con ensalada verde.</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Mixed Artisan Mini Breads <span style="font:300 17px/1 'Spectral',serif; color:var(--paper-soft)">— Pancitos surtidos artesanales</span></h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Mixed Artisan Mini Breads <span data-sub><span data-dash>— </span>Pancitos surtidos artesanales</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 14.90</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">10 mini pancitos calentitos con mantequilla y mermelada hecha en casa.</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Mini Buffalo chicken fingers wraps</h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Mini Buffalo chicken fingers wraps <span data-sub><span data-dash>— </span>Mini wraps de deditos de pollo búfalo</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 31.50</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Cuatro wraps rellenos de deditos de pollo en salsa búfalo, queso fundido, lechuga, y tomate, servidos con salsa Ranch y chips.</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Nachos Supreme <span style="font:300 17px/1 'Spectral',serif; color:var(--paper-soft)">— Nachos supremos</span></h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Nachos Supreme <span data-sub><span data-dash>— </span>Nachos supremos</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 47.90</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Tortilla chips cubiertas de chili con carne, abundante queso cheddar derretido, guacamole, pico de gallo, jalapeños encurtidos y crema ácida.</p>
       <p style="grid-column:1/-1; margin:5px 0 0; font:400 12.5px/1.5 'Alegreya Sans',sans-serif; color:var(--paper-accent)">Porción grande S/ 47.90 · porción individual S/ 31.90</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Chili Cheese Fries</h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Chili Cheese Fries <span data-sub><span data-dash>— </span>Papas con chili y queso</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 31.90</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Abundantes papas fritas de productores locales, chili con carne, queso fundido derretido y trocitos de tocino.</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Crab Ragoons <span style="font:300 17px/1 'Spectral',serif; color:var(--paper-soft)">— Cangrejo cremoso, 6 unidades</span></h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Crab Ragoons <span data-sub><span data-dash>— </span>Cangrejo cremoso, 6 unidades</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 31.90</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Canastitas de masa wantán rellenas de una deliciosa crema de queso y cangrejo ligeramente fritas, servidas con una salsa oriental de la casa.</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Hooters Style Chicken Wings <span style="font:300 17px/1 'Spectral',serif; color:var(--paper-soft)">— Alitas tipo Hooters</span></h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Hooters Style Chicken Wings <span data-sub><span data-dash>— </span>Alitas tipo Hooters</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 29.90</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Seis piezas de irresistibles alitas, servidas con apio, zanahoria y guarnición.</p>
       <p style="grid-column:1/-1; margin:5px 0 0; font:400 12.5px/1.5 'Alegreya Sans',sans-serif; color:var(--paper-accent)">Buffalo · BBQ · Lemon &amp; Pepper · Honey · Sriracha · Honey Chipotle · Teriyaki · Carbon Ranch · Atómicas · Sweet Curry · simples a lo natural</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">4 Sampler Platters <span style="font:300 17px/1 'Spectral',serif; color:var(--paper-soft)">— 4 muestras de entradas</span></h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">4 Sampler Platters <span data-sub><span data-dash>— </span>4 muestras de entradas</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 49.90</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Escoge 4 entradas de tu preferencia para que no te pierdas de probar nuestros sabores.</p>
     </div>
@@ -669,12 +683,12 @@ button{font-family:inherit; cursor:pointer}
   </div>
   <p style="margin:0 0 20px; font:300 14.5px/1.6 'Spectral',serif; font-style:italic; color:var(--paper-soft)">“No me gustan tanto las ensaladas, pero las ensaladas gringas sí se me apetecen” — conversaciones con Jess.</p>
   <div style="columns:330px; column-gap:clamp(28px,4vw,48px)">
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
       <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Ensalada Cobb</h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 31.90</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Cama de lechugas mixtas con un carrusel de palta, huevo duro, cebollas rojas encurtidas, tocino crujiente, queso mozzarella y tomatitos cherry. Con aliño de preferencia.</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
       <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Ensalada Verde</h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 23.90</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Cama de lechugas frescas, tomatitos cherry, zanahoria rallada, pepino, rabanitos encurtidos, queso rallado y trocitos de tocino crocante. Con aliño de preferencia.</p>
@@ -690,44 +704,44 @@ button{font-family:inherit; cursor:pointer}
   </div>
   <p style="margin:0 0 20px; font:300 14.5px/1.6 'Spectral',serif; font-style:italic; color:var(--paper-soft)">“Jess… Brujís, ¿qué almorzaste hoy?” Yo… un sánguche de atún. Jess: “¿eso es almuerzo?” Yo… acá sí.</p>
   <div style="columns:330px; column-gap:clamp(28px,4vw,48px)">
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Roasted Turkey Breast Sandwich <span style="font:300 17px/1 'Spectral',serif; color:var(--paper-soft)">— Sánguche de pechuga de pavo</span></h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Roasted Turkey Breast Sandwich <span data-sub><span data-dash>— </span>Sánguche de pechuga de pavo</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 31.90</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Pan de molde blanco tostado, láminas de pechuga de pavo, mayonesa de la casa, lechuga, tomate. Guarnición a escoger.</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Sloppy Joe Sandwich</h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Sloppy Joe Sandwich <span data-sub><span data-dash>— </span>Sánguche de carne molida</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 27.90</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Jugosa carne molida aderezada con salsa agridulce servida en pan brioche para chuparse los dedos. Guarnición a escoger.</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Philly Cheese Steak Sandwich</h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Philly Cheese Steak Sandwich <span data-sub><span data-dash>— </span>Sánguche de bistec con queso</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 31.90</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Pan ciabatta tostado, láminas de bistec, abundante queso fundido derretido, cebollas acarameladas. Guarnición a escoger.</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Super Crispy Chicken Sandwich</h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Super Crispy Chicken Sandwich <span data-sub><span data-dash>— </span>Sánguche de pollo crocante</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 31.90</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Pan ciabatta, mayonesa de chipotle, muslo de pollo súper crocante, tomate y lechuga fresca. Guarnición a escoger.</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Club Sandwich</h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Club Sandwich <span data-sub><span data-dash>— </span>Sánguche club</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 34.90</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Tres rebanadas de pan de molde integral, mayonesa de la casa, láminas de pavo, láminas de jamón, tiras de tocino crocante, queso cheddar y blanco, lechuga y tomates frescos. Guarnición a escoger.</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Grilled Cheese Sandwich</h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Grilled Cheese Sandwich <span data-sub><span data-dash>— </span>Sánguche de queso a la plancha</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 21.90</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Pan de molde blanco tostado a la plancha con mantequilla, láminas de queso fundido. Guarnición a escoger.</p>
       <p style="grid-column:1/-1; margin:5px 0 0; font:400 12.5px/1.5 'Alegreya Sans',sans-serif; color:var(--paper-accent)">Agregar tomates frescos por S/ 2.00</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Chicken Caesar Salad Sandwich</h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Chicken Caesar Salad Sandwich <span data-sub><span data-dash>— </span>Sánguche de pollo con ensalada césar</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 34.50</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Crujientes pechugas de pollo en pan ciabatta en una cama de ensalada cesar y queso parmesano. Guarnición a escoger.</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Grilled Veggie Cheese Sandwich</h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Grilled Veggie Cheese Sandwich <span data-sub><span data-dash>— </span>Sánguche de vegetales a la plancha con queso</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 28.90</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Vegetales grillados a la plancha (champiñones, pimientos, cebolla blanca, zucchini) en pan ciabatta con queso mozzarella derretido. Guarnición a escoger.</p>
     </div>
@@ -739,24 +753,24 @@ button{font-family:inherit; cursor:pointer}
     <span style="flex:1 1 auto; height:1px; background:var(--paper-rule)"></span>
   </div>
   <div style="columns:330px; column-gap:clamp(28px,4vw,48px)">
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Poet’s Soul Burger <span style="font:300 17px/1 'Spectral',serif; color:var(--paper-soft)">— Hamburguesa Alma de Poeta</span></h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Poet’s Soul Burger <span data-sub><span data-dash>— </span>Hamburguesa Alma de Poeta</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 37.90</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">250 gr. de una mezcla perfecta de carne de res, carne de cerdo y tocino, láminas de queso cheddar, cebollas caramelizadas, palta y rúgula en un delicioso pan brioche rojo untado con mayonesa relish y chipotle. Guarnición a escoger.</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Double Smash Burger w/ Bacon Jam</h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Double Smash Burger w/ Bacon Jam <span data-sub><span data-dash>— </span>Doble smash con mermelada de tocino</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 38.90</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Dos hamburguesas aplastadas sazonadas con sal ahumada de los andes, queso derretido, con una riquísima mermelada de tocino hecha en casa y salsa especial de la casa. Guarnición a escoger.</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Classic Hamburger 100% Meat</h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Classic Hamburger 100% Meat <span data-sub><span data-dash>— </span>Hamburguesa clásica 100% carne</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 30.90</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Pan brioche, hamburguesa de res a la parrilla, tomate, lechuga y una rebanada de cebolla roja. Servida con guarnición a escoger.</p>
       <p style="grid-column:1/-1; margin:5px 0 0; font:400 12.5px/1.5 'Alegreya Sans',sans-serif; color:var(--paper-accent)">Agrégale queso S/ 2.00 · tocino S/ 4.00 · huevo S/ 2.00 · piña S/ 3.00 · pídelo también en opción vegana</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Classic Hot Dog <span style="font:300 17px/1 'Spectral',serif; color:var(--paper-soft)">— Hot dog clásico</span></h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Classic Hot Dog <span data-sub><span data-dash>— </span>Hot dog clásico</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 19.90</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Pan flauta, frankfurter de carne de chancho. Guarnición a escoger.</p>
       <p style="grid-column:1/-1; margin:5px 0 0; font:400 12.5px/1.5 'Alegreya Sans',sans-serif; color:var(--paper-accent)">Agrégale chili con carne y queso por S/ 5.00, mayonesa relish y chipotle</p>
@@ -777,39 +791,39 @@ button{font-family:inherit; cursor:pointer}
   </div>
   <p style="margin:0 0 20px; font:300 14.5px/1.6 'Spectral',serif; font-style:italic; color:var(--paper-soft)">“Eso se ve riquishishishisimo” — expresiones de Jess.</p>
   <div style="columns:330px; column-gap:clamp(28px,4vw,48px)">
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Fish Tacos <span style="font:300 17px/1 'Spectral',serif; color:var(--paper-soft)">— Tacos de pescado</span></h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Fish Tacos <span data-sub><span data-dash>— </span>Tacos de pescado</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 34.90</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">3 tacos con trozos de pescado frito, ensalada de col morada estilo Kentucky, palta y jalapeños encurtidos. Servido con papas fritas.</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Chicken Tacos</h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Chicken Tacos <span data-sub><span data-dash>— </span>Tacos de pollo</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 34.90</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">3 tacos de pollo doradito, lechuga, cebolla y tomate, mucho guacamole y salsa ranch. Servido con papas fritas.</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Smash Burger Tacos <span style="font:300 17px/1 'Spectral',serif; color:var(--paper-soft)">— Tacos de carne molida</span></h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Smash Burger Tacos <span data-sub><span data-dash>— </span>Tacos de carne molida</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 36.50</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">3 tacos de hamburguesa (smash), queso cheddar, cebolla blanca y salsa especial de chipotle. Servido con papas fritas.</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Classic Chicken Fingers</h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Classic Chicken Fingers <span data-sub><span data-dash>— </span>Deditos de pollo clásicos</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 39.90</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Tiras de pechuga de pollo empanizadas y doradas a perfección, servidas con papas fritas artesanales, ensalada fresca y salsa de honey mustard y ranch.</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Fetuccini Alfredo</h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Fetuccini Alfredo <span data-sub><span data-dash>— </span>Fetuccini en salsa Alfredo</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 31.90</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Fideos en salsa Alfredo hecha en casa, jamón. Servido con pan al ajo.</p>
       <p style="grid-column:1/-1; margin:5px 0 0; font:400 12.5px/1.5 'Alegreya Sans',sans-serif; color:var(--paper-accent)">200 gr. de proteína: pollo S/ 10.00 · langostino jumbo S/ 15.00 · carne S/ 13.00 · tofu S/ 6.00</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Garlic Shrimp Spaguetti <span style="font:300 17px/1 'Spectral',serif; color:var(--paper-soft)">— Tallarines al ajo con langostinos</span></h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Garlic Shrimp Spaguetti <span data-sub><span data-dash>— </span>Tallarines al ajo con langostinos</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 36.50</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Espagueti en salsa de ajo, mantequilla y aceite de oliva, langostinos, queso parmesano, tomatitos cherry y perejil. Servido con pan al ajo.</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Soup Of The Day <span style="font:300 17px/1 'Spectral',serif; color:var(--paper-soft)">— Sopa del día (solo invierno)</span></h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Soup Of The Day <span data-sub><span data-dash>— </span>Sopa del día (solo invierno)</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 15.00</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Pregunta por la sopa del día. Bowl S/ 15.00 · ½ bowl S/ 8.00</p>
     </div>
@@ -823,80 +837,80 @@ button{font-family:inherit; cursor:pointer}
   </div>
   <p style="margin:0 0 20px; font:300 14.5px/1.6 'Spectral',serif; font-style:italic; color:var(--paper-soft)">“¡¡¡Hoy es Memingo (domingo), día de postre!!!” — día esperado por Jess.</p>
   <div style="columns:330px; column-gap:clamp(28px,4vw,48px)">
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Mud Pie <span style="font:300 17px/1 'Spectral',serif; color:var(--paper-soft)">— Pie de helado</span></h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Mud Pie <span data-sub><span data-dash>— </span>Pie de helado</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 18.90</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Masa de pie, un mix de helados de chocolate, café, licor de Baileys, bits de chocolate, servido con crema y más bits de chocolate y pecanas en trocitos.</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Banana Bread <span style="font:300 17px/1 'Spectral',serif; color:var(--paper-soft)">— Keke de banana</span></h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Banana Bread <span data-sub><span data-dash>— </span>Keke de banana</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 10.50</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Delicioso keke de plátano, con pecanas y pasas hecho en casa.</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">N.Y Style Cheese Cake</h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">N.Y Style Cheese Cake <span data-sub><span data-dash>— </span>Tarta de queso estilo Nueva York</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 17.50</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Deliciosa tarta de puro queso crema, azúcar, vainilla, huevos… así de simple. Escoge la salsa de tu gusto: fresa, arándanos o moras.</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Peach Cobbler a la Mode <span style="font:300 17px/1 'Spectral',serif; color:var(--paper-soft)">— Duraznos glaseados y helado</span></h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Peach Cobbler a la Mode <span data-sub><span data-dash>— </span>Duraznos glaseados y helado</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 17.90</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Duraznos con almíbar reducida, con una pequeña y delgada masa de harina. Servido con una bola de helado de vainilla.</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
       <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Brownie</h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 8.00</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Delicioso pastelito de cacao, crujiente y bañado en chocolate Hershey y pecanas.</p>
       <p style="grid-column:1/-1; margin:5px 0 0; font:400 12.5px/1.5 'Alegreya Sans',sans-serif; color:var(--paper-accent)">Agrégale bola de helado S/ 4.00</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Chocolate Cake <span style="font:300 17px/1 'Spectral',serif; color:var(--paper-soft)">— Torta de chocolate</span></h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Chocolate Cake <span data-sub><span data-dash>— </span>Torta de chocolate</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 17.90</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Deliciosa torta de chocolate y manjar, endulzada con panela.</p>
       <p style="grid-column:1/-1; margin:5px 0 0; font:400 12.5px/1.5 'Alegreya Sans',sans-serif; color:var(--paper-accent)">Agregar bola de helado S/ 4.00</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Ice Cream Sundae <span style="font:300 17px/1 'Spectral',serif; color:var(--paper-soft)">— Helados</span></h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Ice Cream Sundae <span data-sub><span data-dash>— </span>Helados</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 16.90</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">2 bolas de helado D’Onofrio (vainilla, chocolate o fresa), salsa de chocolate Hershey’s o salsa de dulce de leche Nestlé, trocitos de pecanas y crema chantilly.</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Banana Split</h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Banana Split <span data-sub><span data-dash>— </span>Helado con plátano y salsas</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 24.90</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">3 bolas de helado, salsa de fresa, piña y chocolate Hershey’s, en medio de dos mitades de plátano con crema chantilly, pecanas y marrasquinos.</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Lemon Pie <span style="font:300 17px/1 'Spectral',serif; color:var(--paper-soft)">— Pie de limón</span></h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Lemon Pie <span data-sub><span data-dash>— </span>Pie de limón</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 17.90</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Suave masa de galleta con una deliciosa crema de limón y cubierta de un ligero merengue.</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Apple Crisp a la Mode <span style="font:300 17px/1 'Spectral',serif; color:var(--paper-soft)">— Manzana crujiente y helado</span></h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Apple Crisp a la Mode <span data-sub><span data-dash>— </span>Manzana crujiente y helado</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 16.90</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Manzanas acarameladas con canela, con una capa de pedacitos de masa crujiente y calientita. Servido con una bola de helado de vainilla.</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Carrot Cake <span style="font:300 17px/1 'Spectral',serif; color:var(--paper-soft)">— Keke de zanahoria</span></h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Carrot Cake <span data-sub><span data-dash>— </span>Keke de zanahoria</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 16.90</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Clásico keke de zanahoria bañado con una suave crema de limón.</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Banana Chimichanga</h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Banana Chimichanga <span data-sub><span data-dash>— </span>Chimichanga de plátano con manjar</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 17.50</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Tortilla mexicana de harina frita, rellena con dulce de leche y plátano, espolvoreada con canela y azúcar y coronada con una bola de helado.</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
       <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">7 mini churritos rellenos de manjar</h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 14.50</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Churritos dorados a la perfección y rellenos de un delicioso manjar.</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
       <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">9 mini churritos con azúcar y canela</h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 12.50</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Churritos dorados a la perfección espolvoreados con azúcar y canela.</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Muffins</h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Muffins <span data-sub><span data-dash>— </span>Queques individuales</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 6.50</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Suave bizcocho relleno de fruta de estación (preguntar por el sabor del día).</p>
     </div>
@@ -908,52 +922,52 @@ button{font-family:inherit; cursor:pointer}
     <span style="flex:1 1 auto; height:1px; background:var(--paper-rule)"></span>
   </div>
   <div style="columns:330px; column-gap:clamp(28px,4vw,48px)">
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Two Eggs Any Style <span style="font:300 17px/1 'Spectral',serif; color:var(--paper-soft)">— Desayuno de dos huevos</span></h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Two Eggs Any Style <span data-sub><span data-dash>— </span>Desayuno de dos huevos</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 27.90</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Dos huevos (fritos, revueltos, escalfados, solo claras), 3 tiras de tocino crocante o 3 mini salchichas, papas de la casa y dos rebanadas de pan a escoger.</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">3 Egg Omelette <span style="font:300 17px/1 'Spectral',serif; color:var(--paper-soft)">— Omelette de 3 huevos</span></h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">3 Egg Omelette <span data-sub><span data-dash>— </span>Omelette de 3 huevos</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 29.90</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">3 huevos frescos batidos formando una esponjosa tortilla, rellena de su proteína, vegetal y queso de su preferencia, papas de la casa y dos rebanadas de pan tostado.</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Breakfast Sandwich <span style="font:300 17px/1 'Spectral',serif; color:var(--paper-soft)">— Sánguche de desayuno</span></h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Breakfast Sandwich <span data-sub><span data-dash>— </span>Sánguche de desayuno</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 24.90</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Pan de tu preferencia, tocino, jamón o mini salchichas, huevo (cualquier estilo) finalizado con queso fundido derretido. Servido con papas de la casa.</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Avocado Toast <span style="font:300 17px/1 'Spectral',serif; color:var(--paper-soft)">— Tostada de palta</span></h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Avocado Toast <span data-sub><span data-dash>— </span>Tostada de palta</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 18.90</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Una rebanada de pan a escoger tostado, palta cremosa, coronado con un huevo (cualquier estilo).</p>
       <p style="grid-column:1/-1; margin:5px 0 0; font:400 12.5px/1.5 'Alegreya Sans',sans-serif; color:var(--paper-accent)">Agregar papas de la casa por S/ 4.00</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Chicken Salad Croissant <span style="font:300 17px/1 'Spectral',serif; color:var(--paper-soft)">— Croissant de pollo</span></h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Chicken Salad Croissant <span data-sub><span data-dash>— </span>Croissant de pollo</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 29.90</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Delicioso y suave croissant relleno de una fresca ensalada de pollo en cubitos, dátiles, apio, pecanas y mayonesa de la casa, lechuga y tomate con un toque de salsa al pesto. Guarnición a escoger.</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">French Toast <span style="font:300 17px/1 'Spectral',serif; color:var(--paper-soft)">— Tostadas francesas</span></h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">French Toast <span data-sub><span data-dash>— </span>Tostadas francesas</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 24.90</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">4 tajadas de pan, arrebozadas en una ligera masa de huevo, canela y vainilla, servidas con miel de la casa.</p>
       <p style="grid-column:1/-1; margin:5px 0 0; font:400 12.5px/1.5 'Alegreya Sans',sans-serif; color:var(--paper-accent)">Agrégale frutas de estación S/ 4.00 · miel de abeja, salsa de chocolate Hershey’s o dulce de leche S/ 4.00</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Three Grain Pancakes <span style="font:300 17px/1 'Spectral',serif; color:var(--paper-soft)">— Panqueques de tres granos</span></h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Three Grain Pancakes <span data-sub><span data-dash>— </span>Panqueques de tres granos</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 24.90</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">3 panqueques de masa de harina (trigo, maíz, coco), mantequilla y miel de la casa.</p>
       <p style="grid-column:1/-1; margin:5px 0 0; font:400 12.5px/1.5 'Alegreya Sans',sans-serif; color:var(--paper-accent)">Agrega frutas de estación S/ 4.00 · choco chips S/ 3.00 · pecanas S/ 3.00</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Belgian Waffles <span style="font:300 17px/1 'Spectral',serif; color:var(--paper-soft)">— Waffles belgas (gruesos)</span></h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Belgian Waffles <span data-sub><span data-dash>— </span>Waffles belgas (gruesos)</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 24.90</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Masa de 3 harinas (trigo, maíz y coco), mantequilla y miel hecha en casa.</p>
       <p style="grid-column:1/-1; margin:5px 0 0; font:400 12.5px/1.5 'Alegreya Sans',sans-serif; color:var(--paper-accent)">Agrega frutas de estación S/ 4.00</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Seasonal Fruit Platter <span style="font:300 17px/1 'Spectral',serif; color:var(--paper-soft)">— Frutas frescas de estación</span></h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Seasonal Fruit Platter <span data-sub><span data-dash>— </span>Frutas frescas de estación</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 24.90</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Frutas de estación, yogurt griego cítrico, miel de abeja orgánica y granola hecha en casa.</p>
     </div>
@@ -970,44 +984,44 @@ button{font-family:inherit; cursor:pointer}
     <span style="flex:1 1 auto; height:1px; background:var(--paper-rule)"></span>
   </div>
   <div style="columns:330px; column-gap:clamp(28px,4vw,48px)">
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
       <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Gaseosa Artesanal</h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 14.00</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Preparadas con fruta natural, stevia y agua gasificada. Naranja · limón · piña · maracuyá · fresa · granadilla S/ 16.00</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
       <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Jugos Naturales</h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 12.00 – 17.00</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Mango S/ 15.00 · naranja fresca S/ 12.00 · piña S/ 14.00 · granadilla S/ 16.00 · fresa S/ 15.00 · maracuyá S/ 14.00 · plátano S/ 14.00 · mix de 2 ó 3 frutas S/ 17.00</p>
       <p style="grid-column:1/-1; margin:5px 0 0; font:400 12.5px/1.5 'Alegreya Sans',sans-serif; color:var(--paper-accent)">Agregar leche de vaca o leche vegetal por S/ 3.00</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Strawberry Matcha Latte <span style="font:300 17px/1 'Spectral',serif; color:var(--paper-soft)">— Latte de matcha y fresa</span></h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Strawberry Matcha Latte <span data-sub><span data-dash>— </span>Latte de matcha y fresa</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 21.90</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Una bebida súper refrescante y llena de sabor: fresas frescas, matcha orgánica, hielos y leche de tu preferencia.</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
       <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Limonada</h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 12.00</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Jarra de 1L S/ 20.00 · frozen S/ 23.50. Pídela de hierba buena, hierba luisa, muña o menta por S/ 3.00</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
       <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Té Helado</h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 12.00</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Jarra de 1L S/ 20.00. De maracuyá: jarra de 1L S/ 25.00 · frozen S/ 28.50</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Agua de Coco Natural <span style="font:300 17px/1 'Spectral',serif; color:var(--paper-soft)">— solo verano</span></h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Agua de Coco Natural <span data-sub><span data-dash>— </span>solo verano</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 15.00</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Jarra de 1L S/ 28.00</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Milkshakes</h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Milkshakes <span data-sub><span data-dash>— </span>Batidos de helado</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 21.90</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Helado, leche y crema chantilly. Vainilla · fresa · chocolate · café. Oreo, espirulina o brownie S/ 23.90</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Smoothies</h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Smoothies <span data-sub><span data-dash>— </span>Batidos de fruta</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 24.90</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Elige stevia o panela. Berry: arándanos, fresas, moras, agua de coco · Espirulina: espirulina artesanal, plátano, leche de almendras · Peanut Butter Maca: plátano, cacao, maca, mantequilla de maní, cacao nibs.</p>
     </div>
@@ -1024,98 +1038,98 @@ button{font-family:inherit; cursor:pointer}
   </div>
   <p style="margin:0 0 20px; font:300 14.5px/1.6 'Spectral',serif; font-style:italic; color:var(--paper-soft)">Nuestro café proviene de San Ignacio, Cajamarca, a 1750 msnm. Proceso lavado; variedades caturra amarilla, pache y típica; notas de frutos rojos, chocolate dulce y avellanas; tostado medio oscuro. 100% arábica, sembrado, cosechado y tostado por Armache.</p>
   <div style="columns:330px; column-gap:clamp(28px,4vw,48px)">
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:11px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Espresso</h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:11px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Espresso <span data-sub><span data-dash>— </span>Café expreso</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 9.00</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">2 onzas de café puro.</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:11px 0; border-bottom:1px solid var(--paper-rule)">
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:11px 0; border-bottom:1px solid var(--paper-rule)">
       <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Americano</h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 9.00</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Espresso + agua caliente.</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:11px 0; border-bottom:1px solid var(--paper-rule)">
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:11px 0; border-bottom:1px solid var(--paper-rule)">
       <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Café Cortado</h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 12.00</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">2 onzas de espresso + una pizca de leche espumada.</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:11px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Cappuccino</h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:11px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Cappuccino <span data-sub><span data-dash>— </span>Capuchino</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 13.90</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Espresso + leche espumada.</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:11px 0; border-bottom:1px solid var(--paper-rule)">
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:11px 0; border-bottom:1px solid var(--paper-rule)">
       <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Café Latte</h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 15.90</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Espresso + leche texturizada.</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:11px 0; border-bottom:1px solid var(--paper-rule)">
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:11px 0; border-bottom:1px solid var(--paper-rule)">
       <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Café Mocha</h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 17.90</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Espresso + cacao en polvo y leche espumada.</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:11px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Affogato</h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:11px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Affogato <span data-sub><span data-dash>— </span>Espresso con helado de vainilla</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 16.90</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Espresso + helado de vainilla.</p>
     </div>
     <div style="break-inside:avoid; padding:16px 0 6px">
       <p style="margin:0; font:500 11px/1 'Alegreya Sans',sans-serif; letter-spacing:.26em; text-transform:uppercase; color:var(--paper-accent)">Cafés fríos</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:11px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Iced Cold Brew</h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:11px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Iced Cold Brew <span data-sub><span data-dash>— </span>Café frío de extracción lenta</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 12.00</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Café infusionado al frío por 24 horas.</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:11px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Orange Cold Brew</h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:11px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Orange Cold Brew <span data-sub><span data-dash>— </span>Cold brew con naranja</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 14.90</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Café cold brew con jugo de naranja.</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:11px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Mocha Frappe</h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:11px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Mocha Frappe <span data-sub><span data-dash>— </span>Frappé de cacao</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 18.90</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Espresso + cacao + leche. Pídelo también caliente.</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:11px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Algarrobina Frappe</h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:11px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Algarrobina Frappe <span data-sub><span data-dash>— </span>Frappé de algarrobina</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 19.90</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Espresso + algarrobina + leche.</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:11px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Caramel Frappe</h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:11px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Caramel Frappe <span data-sub><span data-dash>— </span>Frappé de caramelo</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 19.90</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Espresso + caramelo + leche.</p>
     </div>
     <div style="break-inside:avoid; padding:16px 0 6px">
       <p style="margin:0; font:500 11px/1 'Alegreya Sans',sans-serif; letter-spacing:.26em; text-transform:uppercase; color:var(--paper-accent)">Otras bebidas calientes</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:11px 0; border-bottom:1px solid var(--paper-rule)">
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:11px 0; border-bottom:1px solid var(--paper-rule)">
       <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Cacao</h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 14.90</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">100% cacao + leche. Agrégale marshmallows por S/ 3.00</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:11px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Golden Milk Latte</h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:11px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Golden Milk Latte <span data-sub><span data-dash>— </span>Latte de cúrcuma y especias</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 18.90</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Infusión de kión, cúrcuma, canela, pimienta negra y leche espumada.</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:11px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Matcha Latte</h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:11px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Matcha Latte <span data-sub><span data-dash>— </span>Latte de té verde matcha</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 18.90</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Matcha té verde + leche espumada.</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:11px 0; border-bottom:1px solid var(--paper-rule)">
-      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Caramel Latte</h4>
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:11px 0; border-bottom:1px solid var(--paper-rule)">
+      <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Caramel Latte <span data-sub><span data-dash>— </span>Latte de caramelo</span></h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 18.90</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Dulce de leche + espresso + leche espumada.</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:11px 0; border-bottom:1px solid var(--paper-rule)">
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:11px 0; border-bottom:1px solid var(--paper-rule)">
       <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Espirulina Latte</h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 18.90</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Espirulina fresca con leche espumada.</p>
     </div>
-    <div style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:11px 0; border-bottom:1px solid var(--paper-rule)">
+    <div data-dish style="break-inside:avoid; display:grid; grid-template-columns:1fr auto; gap:3px 14px; align-items:baseline; padding:11px 0; border-bottom:1px solid var(--paper-rule)">
       <h4 style="margin:0; font:400 clamp(23px,3.2vw,28px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Emoliente</h4>
       <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 10.00</span>
       <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Cebada, cola de caballo, linaza, boldo.</p>
@@ -1128,7 +1142,7 @@ button{font-family:inherit; cursor:pointer}
     <h3 style="margin:0; font:600 clamp(22px,3.4vw,30px)/1.1 'Spectral',serif; color:var(--paper-ink); letter-spacing:-.01em"><span style="display:var(--i-es)">Té e infusiones</span><span style="display:var(--i-en)">Tea &amp; infusions</span></h3>
     <span style="flex:1 1 auto; height:1px; background:var(--paper-rule)"></span>
   </div>
-  <div style="display:grid; grid-template-columns:1fr auto; gap:4px 14px; align-items:baseline; padding:0 0 14px; border-bottom:1px solid var(--paper-rule)">
+  <div data-dish style="display:grid; grid-template-columns:1fr auto; gap:4px 14px; align-items:baseline; padding:0 0 14px; border-bottom:1px solid var(--paper-rule)">
     <h4 style="margin:0; font:400 clamp(25px,3.4vw,30px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Té, infusiones</h4>
     <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">S/ 10.00</span>
     <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Escoge tus sabores hasta con 3 hierbas. Endulza tu infusión con stevia natural, miel de abeja o panela.</p>
@@ -1157,7 +1171,7 @@ button{font-family:inherit; cursor:pointer}
     <p style="break-inside:avoid; margin:0 0 9px; font:300 13.5px/1.5 'Spectral',serif; color:var(--paper-soft)"><span style="font-weight:500; color:var(--paper-ink)">Té verde.</span> Mejora la función cerebral y tiene propiedades antidiabéticas.</p>
     <p style="break-inside:avoid; margin:0 0 9px; font:300 13.5px/1.5 'Spectral',serif; color:var(--paper-soft)"><span style="font-weight:500; color:var(--paper-ink)">Toronjil.</span> Tiene propiedades diuréticas y antiespasmódicas.</p>
   </div>
-  <div style="display:grid; grid-template-columns:1fr auto; gap:4px 14px; align-items:baseline; padding:14px 0 0; border-top:1px solid var(--paper-rule)">
+  <div data-dish style="display:grid; grid-template-columns:1fr auto; gap:4px 14px; align-items:baseline; padding:14px 0 0; border-top:1px solid var(--paper-rule)">
     <h4 style="margin:0; font:400 clamp(25px,3.4vw,30px)/1.15 'Pinyon Script',cursive; color:var(--paper-ink)">Tizanas</h4>
     <span style="font:500 14.5px/1 'Spectral',serif; color:var(--paper-accent); white-space:nowrap">+ S/ 5.00</span>
     <p style="grid-column:1/-1; margin:4px 0 0; font:300 14px/1.55 'Spectral',serif; color:var(--paper-soft)">Con cualquier base de infusión. Escoge hasta 3 sabores adicionales de frutas deshidratadas: fresa · higos · naranja · kion · piña · bayas de goji · canela y clavo · kiwi · manzana · ralladura de limón · mango.</p>
@@ -1287,8 +1301,11 @@ class Component extends DCLogic {
       b.style.borderColor = on ? 'var(--paper-ink)' : 'var(--paper-rule)';
       if (on && b.parentElement) {
         const p = b.parentElement;
-        const x = b.offsetLeft - p.clientWidth / 2 + b.offsetWidth / 2;
-        p.scrollTo({ left: Math.max(0, x), behavior: 'smooth' });
+        if (p.clientWidth > 0) {
+          const max = Math.max(0, p.scrollWidth - p.clientWidth);
+          const x = b.offsetLeft - p.clientWidth / 2 + b.offsetWidth / 2;
+          p.scrollTo({ left: Math.min(Math.max(0, x), max), behavior: 'smooth' });
+        }
       }
     });
   }
