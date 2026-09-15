@@ -89,6 +89,14 @@ html.adp-pre [data-intro="fade"]{animation-name:adp-fade}
   [data-lang]{min-height:40px !important; padding:10px 13px !important}
   [data-rail]{flex-direction:row !important; gap:8px !important; padding:7px !important}
   [data-cta-row] > a{flex:1 1 100%; justify-content:center}
+  [data-mhead]{gap:10px !important}
+  [data-mhead-title]{gap:8px !important}
+  [data-mhead-btns]{gap:8px !important}
+  [data-mpen]{width:46px !important; height:46px !important}
+  [data-mtitle]{font-size:27px !important}
+  [data-msub]{font-size:9.5px !important; letter-spacing:.2em !important}
+  [data-pdfbtn]{flex-direction:column; justify-content:center; gap:1px !important; width:44px; padding:0 !important; border-radius:50% !important; font-size:8.5px !important; letter-spacing:.06em !important}
+  [data-pdfbtn] svg{width:14px; height:14px}
   [data-mhide]{display:none}
 }
 @media (max-width:520px){
@@ -555,9 +563,9 @@ button{font-family:inherit; cursor:pointer}
   <div onClick="{{ closeCarta }}" style="position:absolute; inset:0; background:rgba(16,13,10,.52); backdrop-filter:blur(12px) saturate(.85); -webkit-backdrop-filter:blur(12px) saturate(.85)"></div>
   <div role="dialog" aria-modal="true" aria-label="Carta" style="position:relative; display:flex; flex-direction:column; width:min(1080px,100%); height:min(90svh,1000px); background:var(--paper); border:1px solid var(--paper-rule); box-shadow:0 40px 90px -40px rgba(0,0,0,.6); transform:translateY(var(--ov-y)) scale(var(--ov-s)); transition:transform .5s cubic-bezier(.22,.8,.26,1), background-color .48s ease-in-out; overflow:hidden">
     <div style="position:absolute; inset:0; pointer-events:none; opacity:.45; mix-blend-mode:multiply; background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='q'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.04' numOctaves='5'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23q)' opacity='0.5'/%3E%3C/svg%3E&quot;)"></div>
-    <div style="position:relative; display:flex; align-items:flex-start; justify-content:space-between; gap:16px; padding:clamp(18px,3vw,30px) clamp(18px,3.4vw,38px) 0; flex:0 0 auto">
-      <div style="display:flex; align-items:center; gap:clamp(10px,2vw,20px)">
-        <div data-mhide style="position:relative; width:clamp(50px,8vw,74px); height:clamp(50px,8vw,74px); flex:0 0 auto; color:var(--paper-accent)">
+    <div data-mhead style="position:relative; display:flex; align-items:flex-start; justify-content:space-between; gap:16px; padding:clamp(18px,3vw,30px) clamp(18px,3.4vw,38px) 0; flex:0 0 auto">
+      <div data-mhead-title style="display:flex; align-items:center; gap:clamp(10px,2vw,20px); min-width:0">
+        <div data-mpen style="position:relative; width:clamp(50px,8vw,74px); height:clamp(50px,8vw,74px); flex:0 0 auto; color:var(--paper-accent)">
           <svg viewBox="0 0 120 120" width="100%" height="100%" style="animation:adp-float 7s ease-in-out infinite">
             <g transform="rotate(-36 60 58)" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
               <path d="M52 14 q8 -8 16 0 v44 h-16 z"></path>
@@ -573,12 +581,12 @@ button{font-family:inherit; cursor:pointer}
           </svg>
         </div>
         <div>
-          <p style="margin:0 0 4px; font:400 clamp(30px,5vw,44px)/1 'Pinyon Script',cursive; color:var(--paper-ink)"><span style="display:var(--i-es)">Nuestra carta</span><span style="display:var(--i-en)">Our menu</span></p>
-          <p style="margin:0; font:500 10.5px/1 'Alegreya Sans',sans-serif; letter-spacing:.3em; text-transform:uppercase; color:var(--paper-accent)"><span style="display:var(--i-es)">Alma de Poeta · precios en soles</span><span style="display:var(--i-en)">Alma de Poeta · prices in soles</span></p>
+          <p data-mtitle style="margin:0 0 4px; font:400 clamp(30px,5vw,44px)/1 'Pinyon Script',cursive; color:var(--paper-ink); white-space:nowrap"><span style="display:var(--i-es)">Nuestra carta</span><span style="display:var(--i-en)">Our menu</span></p>
+          <p data-msub style="margin:0; font:500 10.5px/1 'Alegreya Sans',sans-serif; letter-spacing:.3em; text-transform:uppercase; color:var(--paper-accent); white-space:nowrap"><span data-mhide>Alma de Poeta · </span><span style="display:var(--i-es)">precios en soles</span><span style="display:var(--i-en)">prices in soles</span></p>
         </div>
       </div>
-      <div style="display:flex; align-items:center; gap:10px; flex:0 0 auto">
-      <a href="assets/carta-alma-de-poeta.pdf" download="Carta-Alma-de-Poeta.pdf" type="application/pdf" aria-label="Descargar la carta en PDF" style="display:inline-flex; align-items:center; gap:8px; height:44px; padding:0 16px; border:1px solid var(--paper-rule); border-radius:999px; color:var(--paper-ink); font:700 11px/1 'Alegreya Sans',sans-serif; letter-spacing:.16em; text-transform:uppercase; white-space:nowrap; transition:background-color .3s ease" style-hover="background:var(--paper-rule); color:var(--paper-ink)"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11"></path><path d="M7.5 10.5 12 15l4.5-4.5"></path><path d="M5 19.5h14"></path></svg><span><span data-mhide><span style="display:var(--i-es)">Descargar </span><span style="display:var(--i-en)">Download </span></span>PDF</span></a>
+      <div data-mhead-btns style="display:flex; align-items:center; gap:10px; flex:0 0 auto">
+      <a data-pdfbtn href="assets/carta-alma-de-poeta.pdf" download="Carta-Alma-de-Poeta.pdf" type="application/pdf" aria-label="Descargar la carta en PDF" style="display:inline-flex; align-items:center; gap:8px; height:44px; padding:0 16px; border:1px solid var(--paper-rule); border-radius:999px; color:var(--paper-ink); font:700 11px/1 'Alegreya Sans',sans-serif; letter-spacing:.16em; text-transform:uppercase; white-space:nowrap; transition:background-color .3s ease" style-hover="background:var(--paper-rule); color:var(--paper-ink)"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11"></path><path d="M7.5 10.5 12 15l4.5-4.5"></path><path d="M5 19.5h14"></path></svg><span><span data-mhide><span style="display:var(--i-es)">Descargar </span><span style="display:var(--i-en)">Download </span></span>PDF</span></a>
       <button onClick="{{ closeCarta }}" aria-label="Cerrar carta" style="appearance:none; flex:0 0 auto; width:44px; height:44px; border:1px solid var(--paper-rule); border-radius:50%; background:transparent; color:var(--paper-ink); transition:background-color .3s ease, transform .25s ease" style-hover="background:var(--paper-rule); transform:rotate(90deg)">
         <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 6l12 12"></path><path d="M18 6L6 18"></path></svg>
       </button>
