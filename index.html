@@ -468,23 +468,20 @@ button{font-family:inherit; cursor:pointer}
     <span role="img" aria-label="Alma de Poeta café &amp; libros" style="display:block; width:clamp(160px,20vw,220px); aspect-ratio:1154/212; background:var(--ink); -webkit-mask-image:url(assets/logo-firma-cafe-libros.png); mask-image:url(assets/logo-firma-cafe-libros.png); -webkit-mask-size:contain; mask-size:contain; -webkit-mask-repeat:no-repeat; mask-repeat:no-repeat; -webkit-mask-position:left center; mask-position:left center"></span>
     <p style="margin:0; font:400 14.5px/1.8 'Alegreya Sans',sans-serif; color:var(--ink-soft)">Jr. Arístides del Carpio Muñoz 1679<br>Urb. Los Cipreses, Cercado de Lima</p>
     <p style="margin:0; font:400 14.5px/1.8 'Alegreya Sans',sans-serif; color:var(--ink-soft)"><span style="display:var(--i-es)">Lun–Mié 5–10 pm · Jue–Sáb 5–11 pm<br>Domingo cerrado</span><span style="display:var(--i-en)">Mon–Wed 5–10 pm · Thu–Sat 5–11 pm<br>Closed Sunday</span></p>
-    <div style="display:flex; flex-direction:column; gap:12px">
-      <span style="font:700 11px/1 'Alegreya Sans',sans-serif; letter-spacing:.24em; text-transform:uppercase; color:var(--accent)"><span style="display:var(--i-es)">Colores del sitio</span><span style="display:var(--i-en)">Site colours</span></span>
-      <div data-rail style="display:flex; gap:12px">
-  <button data-pal="clasica" onClick="{{ setClasica }}" aria-label="Paleta clásica" title="Clásica" style="appearance:none; width:34px; height:34px; border-radius:50%; border:1px solid rgba(30,27,23,.35); background:#F7F1E3; position:relative; padding:0">
-      <span style="position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:12px; height:12px; border-radius:50%; background:#1E1B17"></span>
-    </button>
-    <button data-pal="verde" onClick="{{ setVerde }}" aria-label="Paleta verde y dorado" title="Verde + dorado" style="appearance:none; width:34px; height:34px; border-radius:50%; border:1px solid rgba(30,27,23,.35); background:#1B5C44; position:relative; padding:0">
-      <span style="position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:12px; height:12px; border-radius:50%; background:#E8BE55"></span>
-    </button>
-    <button data-pal="dorado" onClick="{{ setDorado }}" aria-label="Paleta dorado y verde" title="Dorado + verde" style="appearance:none; width:34px; height:34px; border-radius:50%; border:1px solid rgba(30,27,23,.35); background:#D9A63B; position:relative; padding:0">
-      <span style="position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:12px; height:12px; border-radius:50%; background:#13402F"></span>
-    </button>
-      </div>
-    </div>
   </div>
 </footer>
 
+<div data-rail data-intro="fade" style="animation-delay:1800ms; position:fixed; left:clamp(14px,2.5vw,26px); bottom:clamp(16px,3vw,26px); z-index:55; display:flex; flex-direction:column; gap:10px; padding:11px; background:var(--panel); border:1px solid var(--rule); border-radius:999px; box-shadow:0 14px 34px -18px var(--shadow)">
+  <button data-pal="clasica" onClick="{{ setClasica }}" aria-label="Paleta clásica" title="Clásica" style="appearance:none; width:34px; height:34px; border-radius:50%; border:1px solid rgba(30,27,23,.35); background:#F7F1E3; position:relative; padding:0">
+    <span style="position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:12px; height:12px; border-radius:50%; background:#1E1B17"></span>
+  </button>
+  <button data-pal="verde" onClick="{{ setVerde }}" aria-label="Paleta verde y dorado" title="Verde + dorado" style="appearance:none; width:34px; height:34px; border-radius:50%; border:1px solid rgba(30,27,23,.35); background:#1B5C44; position:relative; padding:0">
+    <span style="position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:12px; height:12px; border-radius:50%; background:#E8BE55"></span>
+  </button>
+  <button data-pal="dorado" onClick="{{ setDorado }}" aria-label="Paleta dorado y verde" title="Dorado + verde" style="appearance:none; width:34px; height:34px; border-radius:50%; border:1px solid rgba(30,27,23,.35); background:#D9A63B; position:relative; padding:0">
+    <span style="position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:12px; height:12px; border-radius:50%; background:#13402F"></span>
+  </button>
+</div>
 
 <a href="{{ waHref }}" target="_blank" rel="noopener" aria-label="WhatsApp" data-intro="fade" style="animation-delay:1800ms; position:fixed; right:clamp(14px,2.5vw,26px); bottom:clamp(16px,3vw,26px); z-index:55; display:inline-flex; align-items:center; gap:10px; padding:0 20px; height:56px; background:var(--btn-bg); color:var(--btn-ink); border:1px solid var(--ink); border-radius:999px; font:700 12.5px/1 'Alegreya Sans',sans-serif; letter-spacing:.16em; text-transform:uppercase; box-shadow:0 16px 36px -18px var(--shadow); transition:background-color .48s ease-in-out, transform .25s ease" style-hover="transform:translateY(-3px); background:var(--btn-bg-h); color:var(--btn-ink)">
   <span style="width:20px; height:20px; background:currentColor; -webkit-mask-image:url(https://cdn.simpleicons.org/whatsapp); mask-image:url(https://cdn.simpleicons.org/whatsapp); -webkit-mask-size:contain; mask-size:contain; -webkit-mask-repeat:no-repeat; mask-repeat:no-repeat; mask-position:center"></span>
