@@ -1326,14 +1326,21 @@ class Component extends DCLogic {
       glow.style.visibility = 'hidden';
       pen.style.zIndex = '3';
       pen.style.transformOrigin = '68.6% 73.9%';
-      const pb = pen.getBoundingClientRect();
-      const tip = { x: pb.left + pb.width * 0.686, y: pb.top + pb.height * 0.739 };
+      // Coordenadas relativas a la seccion: offsetLeft/offsetTop ignoran el scroll y los transform
+      const box = el => {
+        let x = 0, y = 0, n = el;
+        while (n && n !== host) { x += n.offsetLeft; y += n.offsetTop; n = n.offsetParent; }
+        return { x, y, w: el.offsetWidth, h: el.offsetHeight };
+      };
+      const host = root.closest('section') || document.body;
+      const pb = box(pen);
+      const tip = { x: pb.x + pb.w * 0.686, y: pb.y + pb.h * 0.739 };
       const at = (x, y, rot, s) => `translate(${(x - tip.x).toFixed(1)}px, ${(y - tip.y).toFixed(1)}px) rotate(${rot}deg) scale(${s})`;
       let current = 'translate(0px, 0px) rotate(0deg) scale(1)';
       for (const line of visible) {
-        const r = line.getBoundingClientRect();
-        const y = r.top + r.height * 0.8;
-        const x0 = r.left + 2, x1 = r.right;
+        const r = box(line);
+        const y = r.y + r.h * 0.8;
+        const x0 = r.x + 2, x1 = r.x + r.w;
         const lift = at(x0, y - 12, tilt - 8, scale);
         await pen.animate([{ transform: current }, { transform: lift }, { transform: at(x0, y, tilt, scale) }], { duration: 520, easing: ease, fill: 'forwards' }).finished;
         const dur = Math.max(700, (x1 - x0) * 2.8);
